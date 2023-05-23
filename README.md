@@ -32,6 +32,10 @@ More information on the program is provided in the following links:
 
 	`python -m mkdocs build`
 
+5. For developers who would like to create an online version at `https://<name>.github.io/cyberstrike_stormcloud/`
+
+	`python -m mkdocs gh-deploy -f CyberStrike-Lab-Workbook-Solar/mkdocs.yml -v`
+
 # Copyright
 
 Copyright 2023 National Technology & Engineering Solutions of Sandia, LLC (NTESS). Under the terms of Contract DE-NA0003525 with NTESS, the U.S. Government retains certain rights in this software.
