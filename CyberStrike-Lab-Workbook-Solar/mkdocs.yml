@@ -1,0 +1,86 @@
+site_name: CyberStrike Lab Workbook
+# site_url:  https://localhost:8000
+site_url: ""
+use_directory_urls: false
+plugins: []
+
+nav: 
+    - Home: index.md
+    - 'Overview': 
+        - 'Laboratory Background Info': overview/labs_over.md
+#        - Labs: 
+#        - 'Student Lab Equipment': overview/student_lab_equip_over.md
+#        - 'Instructor Lab Equipment': overview/instruct_lab_equip_over.md
+#        - 'Network Topology': overview/net_topology_over.md
+#        - 'Lab Requirements': overview/lab_req_over.md 
+#        - 'Continuing Education Units (CEUs)': overview/ceu_over.md
+#        - 'Learning Objectives and Applicable NIST NICE Framework KSAs': overview/learning_objectives_over.md
+#        - Evaluation: overview/eval_over.md
+#    - 'Lab 1 - OSINT':
+#        - Overview, Goals, Prerequisites: lab-1/over_lab1.md
+#        - Exercises:
+#            - 'Searching for Vulnerabilities using Google': lab-1/vuln_google_lab1.md
+#            - 'Searching for Targets using Shodan': lab-1/targets_shodan_lab1.md
+    - 'Lab 1 - Exploiting DER Interfaces':
+        - Overview, Goals, Prerequisites: lab-2/over_lab2.md
+        - Exercises:
+            - 'Reconnaissance with Nmap': lab-2/recon_nmap2.md
+            - 'Brute Forcing SSH Passwords': lab-2/brute_force_ssh2.md
+    - 'Lab 2 - DOS Attacks':
+        - Overview, Goals, Prerequisites: lab-3/over_lab4.md
+        - Exercises:
+            - 'Denial of Service (DOS)': lab-3/dos.md
+    - 'Lab 3 - Firmware Analysis':    
+        - Overview, Goals, and Prerequisites: lab-4/over_lab3b.md
+        - Exercises:
+            - 'Investigating DER Firmware': lab-4/der_firmware.md
+    - 'Lab 4 - Firmware Cryptography':
+        - Overview, Goals, and Prerequisites: lab-4/over_lab3.md
+        - Exercises:
+            - 'Malicious Firmware': lab-4/malicious_update.md
+            - 'Encrypting/Decrypting Data (optional)': lab-4/encrypt_decrypt_data3.md
+    - 'Lab 5 - Web Exploitation':
+        - Overview, Goals, Prerequisites: lab-5/over_lab5.md
+        - Exercises:
+            - 'Website Exploits': lab-5/web_exploit.md
+            - 'Controlling the DER through VNC': lab-5/control_der_vnc5.md
+    - 'Lab 6 - Vulnerable API and App Security':
+        - Overview, Goals, Prerequisites: lab-6/over_lab6.md
+        - Exercises:
+            - 'Vulnerable API': lab-6/interacting_api.md
+            - 'Smart Phone App Inspection': lab-6/app_inspect.md
+    - 'Lab 7 - Replay and MITM Attacks':
+        - Overview, Goals, Prerequisites: lab-7/over_lab7.md
+        - Exercises:
+            - 'Replay and MITM': lab-7/replay-mitm.md
+    - 'Lab 8 - Security Improvements':
+        - Overview, Goals, Prerequisites: lab-8/over_lab8.md
+        - Exercises:
+            - 'IEEE 2030.5 and FWs': lab-8/20305firewalls.md
+#    - 'Appendix A: Windows Setup (Optional)': setup/windows_setup.md
+#    - 'Appendix B: Kali Linux VM Setup (Optional)': setup/kali_setup.md
+#    - 'Appendix C: Raspberry Pi Setup (Optional)': setup/der_setup.md
+#    - 'Appendix D: MkDocs (Optional)': setup/mkdocs.md
+    - About: about.md
+
+theme: readthedocs
+#    features:
+#        - content.code.annotate
+    
+markdown_extensions:
+    - footnotes
+    - attr_list
+    - md_in_html
+    - tables
+    - toc:
+        permalink: True
+        separator: "_"
+#    - codehilite:
+#        use_pygments: False
+    - pymdownx.superfences:
+#        custom_fences:
+#            - name: md-render
+#              class: md-render
+#              format: !!python/name:mkdocs_custom_fences.md_render.md_sub_render
+              
+copyright: 2022 National Technology and Engineering Solutions of Sandia, LLC

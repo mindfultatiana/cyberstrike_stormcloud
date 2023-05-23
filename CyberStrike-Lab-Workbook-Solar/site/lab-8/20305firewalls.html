@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>IEEE 2030.5 and FWs - CyberStrike Lab Workbook</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "IEEE 2030.5 and FWs";
+        var mkdocs_page_input_path = "lab-8\\20305firewalls.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../index.html" class="icon icon-home"> CyberStrike Lab Workbook
+        </a>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Overview</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../overview/labs_over.html">Laboratory Background Info</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 1 - Exploiting DER Interfaces</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-2/over_lab2.html">Overview, Goals, Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-2/recon_nmap2.html">Reconnaissance with Nmap</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-2/brute_force_ssh2.html">Brute Forcing SSH Passwords</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 2 - DOS Attacks</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-3/over_lab4.html">Overview, Goals, Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-3/dos.html">Denial of Service (DOS)</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 3 - Firmware Analysis</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-4/over_lab3b.html">Overview, Goals, and Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-4/der_firmware.html">Investigating DER Firmware</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 4 - Firmware Cryptography</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-4/over_lab3.html">Overview, Goals, and Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-4/malicious_update.html">Malicious Firmware</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-4/encrypt_decrypt_data3.html">Encrypting/Decrypting Data (optional)</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 5 - Web Exploitation</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-5/over_lab5.html">Overview, Goals, Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-5/web_exploit.html">Website Exploits</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-5/control_der_vnc5.html">Controlling the DER through VNC</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 6 - Vulnerable API and App Security</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-6/over_lab6.html">Overview, Goals, Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-6/interacting_api.html">Vulnerable API</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-6/app_inspect.html">Smart Phone App Inspection</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 7 - Replay and MITM Attacks</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-7/over_lab7.html">Overview, Goals, Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-7/replay-mitm.html">Replay and MITM</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 8 - Security Improvements</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="over_lab8.html">Overview, Goals, Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Exercises</a>
+    <ul class="current">
+                <li class="toctree-l2 current"><a class="reference internal current" href="20305firewalls.html">IEEE 2030.5 and FWs</a>
+    <ul class="current">
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../about.html">About</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">CyberStrike Lab Workbook</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html" class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Lab 8 - Security Improvements &raquo;</li>
+          <li>Exercises &raquo;</li>
+      <li>IEEE 2030.5 and FWs</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="ieee_20305">IEEE 2030.5<a class="headerlink" href="#ieee_20305" title="Permanent link">&para;</a></h1>
+<p>There are three standardized communication protocols identified in IEEE 1547-2018: SunSpec Modbus, IEEE 1815 (DNP3), and IEEE 2030.5.  DER equipment are required to have one of these interfaces so that grid operators and/or 3rd parties can interact with the devices. </p>
+<p>We have seen how the SunSpec Modbus protocol works.  It uses holding registers to read/write data to the DER device which is the Modbus Server.  In the case of IEEE 2030.5, the client and server are "reversed".  The DER is the client (like a Web Browser) which communicates to a IEEE 2030.5 server (like a website, e.g., google.com) to download information at a user-configured poll rate.  This information is encrypted using TLS 1.2 and includes nameplate, configuration, and monitoring information. The default poll rate for IEEE 2030.5 is 15 minutes, but our DER has this set to 10 seconds so the data exchange can studied more easily. By using a TLS connection the prior replay and MITM attacks are no longer possible. </p>
+<ol>
+<li>
+<p>On the Windows machine, start Wireshark. Select <strong>Ethernet1</strong> as the interface to monitor. </p>
+<p>NOTE: you can also get the packet capture on the Kali machine if you run ettercap (<code>sudo ettercap -T --iface eth1 -M ARP /10.10.0.50// ///</code>), but it's a little easier on the DERMS machine. </p>
+</li>
+<li>
+<p>Start the IEEE 2030.5 server by double clicking on the <code>run_2030.5_server.bat</code> icon on the Windows desktop. This will start a Python IEEE 2030.5 server on the DERMS.  <strong>This server is copyrighted software and licensed to CyberStrike for educational purposes only. Please respect this license.</strong></p>
+</li>
+<li>
+<p>After 30 seconds, if you do not see regular traffic in the server screen, please restart the DER simulator device or VM.  Traffic to the simulator should look like the following: </p>
+<div class="highlight"><pre><span></span><code>10.10.0.100 - - [29/Nov/2022 09:19:10] &quot;GET /dev/683475070343/dc?s=0&amp;l=10 HTTP/1.1&quot; 200 1782
+{&#39;time&#39;: 1669738750.8825955, &#39;type&#39;: &#39;req&#39;, &#39;method&#39;: &#39;GET&#39;, &#39;uri&#39;: &#39;/dev/683475070343/mup?s=0&amp;l=10&#39;, &#39;vers&#39;: &#39;HTTP/1.1&#39;, &#39;headers&#39;: {&#39;Host&#39;: &#39;10.10.0.50:9443&#39;, &#39;Accept-Encoding&#39;: &#39;identity&#39;, &#39;Content-Type&#39;: &#39;text/plain&#39;}, &#39;body&#39;: &#39;&#39;}
+{&quot;time&quot;: 1669738750.8825955, &quot;type&quot;: &quot;req&quot;, &quot;method&quot;: &quot;GET&quot;, &quot;uri&quot;: &quot;/dev/683475070343/mup?s=0&amp;l=10&quot;, &quot;vers&quot;: &quot;HTTP/1.1&quot;, &quot;headers&quot;: {&quot;Host&quot;: &quot;10.10.0.50:9443&quot;, &quot;Accept-Encoding&quot;: &quot;identity&quot;, &quot;Content-Type&quot;: &quot;text/plain&quot;}, &quot;body&quot;: &quot;&quot;}
+trying path: GET deque([&#39;dev&#39;, &#39;683475070343&#39;, &#39;mup&#39;]) 683475070343
+type = &lt;class &#39;resource.MirrorUsagePointListResource&#39;&gt; item_type = &lt;class &#39;models.MirrorUsagePoint&#39;&gt;
+response type = &lt;class &#39;bytes&#39;&gt; b&#39;&lt;MirrorUsagePointList xmlns=&quot;urn:ieee:std:2030.5:ns&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; href=&quot;/dev/683475070343/mup&quot; all=&quot;1&quot; results=&quot;1&quot;&gt;&lt;MirrorUsagePoint href=&quot;/dev/683475070343/mup/1&quot;&gt;&lt;mRID&gt;00005B4EB2130000006E00009182&lt;/mRID&gt;&lt;description&gt;DER [Inverter]&lt;/description&gt;&lt;deviceLFDI&gt;FE9D4315AF233C2E9BFA89E3F5F9B645E5B157F2&lt;/deviceLFDI&gt;&lt;MirrorMeterReading href=&quot;/dev/683475070343/mup/1/A&quot;&gt;&lt;mRID&gt;00005B4EB2130000006E00009182&lt;/mRID&gt;&lt;description&gt;Meter reading for Current(A-PhsAB)&lt;/description&gt;&lt;MirrorReadingSet href=&quot;/dev/683475070343/mup/1/A/reading&quot;&gt;&lt;Reading&gt;&lt;value&gt;41.1&lt;/value&gt;&lt;/Reading&gt;&lt;/MirrorReadingSet&gt;&lt;ReadingType&gt;&lt;accumulationBehaviour&gt;4&lt;/accumulationBehaviour&gt;&lt;uom&gt;5&lt;/uom&gt;&lt;/ReadingType&gt;&lt;/MirrorMeterReading&gt;&lt;MirrorMeterReading href=&quot;/dev/683475070343/mup/1/V&quot;&gt;&lt;mRID&gt;00005B4EB2130000006E00009182&lt;/mRID&gt;&lt;description&gt;Meter reading for Voltage(V)&lt;/description&gt;&lt;MirrorReadingSet href=&quot;/dev/683475070343/mup/1/V/reading&quot;&gt;&lt;Reading&gt;&lt;value&gt;280.58297661515286&lt;/value&gt;&lt;/Reading&gt;&lt;/MirrorReadingSet&gt;&lt;ReadingType&gt;&lt;accumulationBehaviour&gt;4&lt;/accumulationBehaviour&gt;&lt;uom&gt;29&lt;/uom&gt;&lt;/ReadingType&gt;&lt;/MirrorMeterReading&gt;&lt;MirrorMeterReading href=&quot;/dev/683475070343/mup/1/Hz&quot;&gt;&lt;mRID&gt;00005B4EB2130000006E00009182&lt;/mRID&gt;&lt;description&gt;Meter reading for Frequency(Hz)&lt;/description&gt;&lt;MirrorReadingSet href=&quot;/dev/683475070343/mup/1/Hz/reading&quot;&gt;&lt;Reading&gt;&lt;value&gt;60.00080670484172&lt;/value&gt;&lt;/Reading&gt;&lt;/MirrorReadingSet&gt;&lt;ReadingType&gt;&lt;accumulationBehaviour&gt;4&lt;/accumulationBehaviour&gt;&lt;uom&gt;33&lt;/uom&gt;&lt;/ReadingType&gt;&lt;/MirrorMeterReading&gt;&lt;MirrorMeterReading href=&quot;/dev/683475070343/mup/1/W&quot;&gt;&lt;mRID&gt;00005B4EB2130000006E00009182&lt;/mRID&gt;&lt;description&gt;Meter reading for Real Power(W)&lt;/description&gt;&lt;MirrorReadingSet href=&quot;/dev/683475070343/mup/1/W/reading&quot;&gt;&lt;Reading&gt;&lt;value&gt;4490.384027103559&lt;/value&gt;&lt;/Reading&gt;&lt;/MirrorReadingSet&gt;&lt;ReadingType&gt;&lt;accumulationBehaviour&gt;4&lt;/accumulationBehaviour&gt;&lt;uom&gt;38&lt;/uom&gt;&lt;/ReadingType&gt;&lt;/MirrorMeterReading&gt;&lt;MirrorMeterReading href=&quot;/dev/683475070343/mup/1/VA&quot;&gt;&lt;mRID&gt;00005B4EB2130000006E00009182&lt;/mRID&gt;&lt;description&gt;Meter reading for Apparent Power(VA)&lt;/description&gt;&lt;MirrorReadingSet href=&quot;/dev/683475070343/mup/1/VA/reading&quot;&gt;&lt;Reading&gt;&lt;value&gt;0&lt;/value&gt;&lt;/Reading&gt;&lt;/MirrorReadingSet&gt;&lt;ReadingType&gt;&lt;accumulationBehaviour&gt;4&lt;/accumulationBehaviour&gt;&lt;uom&gt;61&lt;/uom&gt;&lt;/ReadingType&gt;&lt;/MirrorMeterReading&gt;&lt;MirrorMeterReading href=&quot;/dev/683475070343/mup/1/Var&quot;&gt;&lt;mRID&gt;00005B4EB2130000006E00009182&lt;/mRID&gt;&lt;description&gt;Meter reading for Reactive Power(Var)&lt;/description&gt;&lt;MirrorReadingSet href=&quot;/dev/683475070343/mup/1/Var/reading&quot;&gt;&lt;Reading&gt;&lt;value&gt;0.18003588102062637&lt;/value&gt;&lt;/Reading&gt;&lt;/MirrorReadingSet&gt;&lt;ReadingType&gt;&lt;accumulationBehaviour&gt;4&lt;/accumulationBehaviour&gt;&lt;uom&gt;63&lt;/uom&gt;&lt;/ReadingType&gt;&lt;/MirrorMeterReading&gt;&lt;MirrorMeterReading href=&quot;/dev/683475070343/mup/1/PF&quot;&gt;&lt;mRID&gt;00005B4EB2130000006E00009182&lt;/mRID&gt;&lt;description&gt;Meter reading for Power Factor(PF)&lt;/description&gt;&lt;MirrorReadingSet href=&quot;/dev/683475070343/mup/1/PF/reading&quot;&gt;&lt;Reading&gt;&lt;value&gt;1.0&lt;/value&gt;&lt;/Reading&gt;&lt;/MirrorReadingSet&gt;&lt;ReadingType&gt;&lt;accumulationBehaviour&gt;4&lt;/accumulationBehaviour&gt;&lt;uom&gt;65&lt;/uom&gt;&lt;/ReadingType&gt;&lt;/MirrorMeterReading&gt;&lt;MirrorMeterReading href=&quot;/dev/683475070343/mup/1/VAh&quot;&gt;&lt;mRID&gt;00005B4EB2130000006E00009182&lt;/mRID&gt;&lt;description&gt;Apparent Energy (VAh)&lt;/description&gt;&lt;MirrorReadingSet href=&quot;/dev/683475070343/mup/1/VAh/reading&quot;&gt;&lt;Reading&gt;&lt;value&gt;0&lt;/value&gt;&lt;/Reading&gt;&lt;/MirrorReadingSet&gt;&lt;ReadingType&gt;&lt;accumulationBehaviour&gt;4&lt;/accumulationBehaviour&gt;&lt;uom&gt;71&lt;/uom&gt;&lt;/ReadingType&gt;&lt;/MirrorMeterReading&gt;&lt;MirrorMeterReading href=&quot;/dev/683475070343/mup/1/Wh&quot;&gt;&lt;mRID&gt;00005B4EB2130000006E00009182&lt;/mRID&gt;&lt;description&gt;Real Energy in Watt-hours (Wh)&lt;/description&gt;&lt;MirrorReadingSet href=&quot;/dev/683475070343/mup/1/Wh/reading&quot;&gt;&lt;Reading&gt;&lt;value&gt;0.0&lt;/value&gt;&lt;/Reading&gt;&lt;/MirrorReadingSet&gt;&lt;ReadingType&gt;&lt;accumulationBehaviour&gt;4&lt;/accumulationBehaviour&gt;&lt;uom&gt;72&lt;/uom&gt;&lt;/ReadingType&gt;&lt;/MirrorMeterReading&gt;&lt;MirrorMeterReading href=&quot;/dev/683475070343/mup/1/VArh&quot;&gt;&lt;mRID&gt;00005B4EB2130000006E00009182&lt;/mRID&gt;&lt;description&gt;Reactive Energy (VArh)&lt;/description&gt;&lt;MirrorReadingSet href=&quot;/dev/683475070343/mup/1/VArh/reading&quot;&gt;&lt;Reading&gt;&lt;value&gt;0.0&lt;/value&gt;&lt;/Reading&gt;&lt;/MirrorReadingSet&gt;&lt;ReadingType&gt;&lt;accumulationBehaviour&gt;4&lt;/accumulationBehaviour&gt;&lt;uom&gt;73&lt;/uom&gt;&lt;/ReadingType&gt;&lt;/MirrorMeterReading&gt;&lt;MirrorMeterReading href=&quot;/dev/683475070343/mup/1/Ah&quot;&gt;&lt;mRID&gt;00005B4EB2130000006E00009182&lt;/mRID&gt;&lt;description&gt;Ampere-hours / Available Charge (Ah)&lt;/description&gt;&lt;MirrorReadingSet href=&quot;/dev/683475070343/mup/1/Ah/reading&quot;&gt;&lt;Reading&gt;&lt;value&gt;0&lt;/value&gt;&lt;/Reading&gt;&lt;/MirrorReadingSet&gt;&lt;ReadingType&gt;&lt;accumulationBehaviour&gt;4&lt;/accumulationBehaviour&gt;&lt;uom&gt;106&lt;/uom&gt;&lt;/ReadingType&gt;&lt;/MirrorMeterReading&gt;&lt;postRate&gt;40&lt;/postRate&gt;&lt;/MirrorUsagePoint&gt;&lt;/MirrorUsagePointList&gt;&#39; 4630
+10.10.0.100 - - [29/Nov/2022 09:19:10] &quot;GET /dev/683475070343/mup?s=0&amp;l=10 HTTP/1.1&quot; 200 4630
+</code></pre></div>
+</li>
+<li>
+<p>After more than 60 seconds, stop the wireshark capture using the red square icon in the upper left. Let's look at the IEEE 2030.5 traffic.  To isolate this data exchange, we can filter on the server port by entering the following filter into wireshark: </p>
+<p><code>tcp.port==9443</code></p>
+<p>After this you should see traffic that looks like the following: </p>
+<p><img alt="IEEE 2030.5 Capture" src="../img/20305Capture.PNG" />
+To see larger: <code>Right click</code> -&gt; <code>Open image in new tab</code></p>
+</li>
+<li>
+<p>You can see every 10 seconds, there is a TLSv1.2 Handshake. </p>
+<p><div class="highlight"><pre><span></span><code>  Client                                                      Server
+______________________________________________________________________
+  ClientHello                  --------&gt;
+                                                        ServerHello
+                                                        Certificate*
+                                                  ServerKeyExchange*
+                                                 CertificateRequest*
+                               &lt;--------            ServerHelloDone
+  Certificate*
+  ClientKeyExchange
+  CertificateVerify*
+  [ChangeCipherSpec]
+  Finished                     --------&gt;
+                                                  [ChangeCipherSpec]
+                               &lt;--------                   Finished
+  Application Data             &lt;-------&gt;           Application Data
+</code></pre></div>
+Basic message flow for a TLSv1.2 handshake (from RFC 5246)</p>
+</li>
+<li>
+<p>First, the client contacts the server with the <code>Client Hello</code> message and the server responds with a TLSv1.2 <code>Server Hello, Certificate, Server Key Exchange, Certificate Request, Server Hello Done</code>.  If you dig into the certificate in the exchange, you can see the organizationName (<code>Test MICA Organization 2</code>) and where they are located (<code>US</code>). We will not cover the Public Key Infrastrucutre (PKI) for IEEE 2030.5 here, but the MICA is the Manufacturer Issuing Certificate Authority that signs device certificates. </p>
+<p><img alt="IEEE 2030.5 Cipher" src="../img/IEEE2030Cipher.PNG" /></p>
+</li>
+<li>
+<p>IEEE 2030.5 uses mutual TLS (mTLS) which means that the client must also share their certificate with the server.  This is different than internet browsing where the client is authenticated using, e.g., username and password combinations.  The client responds with a <code>Certificate, Client Key Exchange, Certificate Verify, Change Cipher Spec, Encrypted Handshake Message</code>. The server responds with a <code>New Session Ticket, Change Cipher Spec, Encrypted Handshake Message</code> TLSv1.2 packet. This establishes the encrypted tunnel into which the client and server can communicate. No 3rd party can see this data even if this data was intercepted.</p>
+</li>
+<li>
+<p>Let's look at the data being exchanged between the client and server.  In Wireshark, look at some of the TLSv1.2 Application Data.  You can see that it's just a "binary blob" of data that has no meaning.  </p>
+<p><img alt="" src="../img/IEEE2030Encrypted.PNG" /></p>
+</li>
+<li>
+<p>If you are curious what this binary data looks like once decrypted, we can go back to the server to investigate. IEEE 2030.5 has a detailed RESTful schema for DER equipment that is described in the <a href="https://sunspec.org/wp-content/uploads/2019/08/CSIPImplementationGuidev2.103-15-2018.pdf">Common Smart Inverter Profile (CSIP)</a>.  Without covering all the functionality represented by the protocol, here are some of the exchanged data: </p>
+<table>
+<thead>
+<tr>
+<th>Data</th>
+<th>Description</th>
+<th>URI path</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Registration</code></td>
+<td>Registration is the process of creating an <code>EndDevice</code> instance</td>
+<td>URI: <code>/dev/683475070343/edev/1/rg</code></td>
+</tr>
+<tr>
+<td><code>FunctionSetAssignmentsList</code></td>
+<td>Group membership is conveyed to an Aggregator or Directly Communicated to a DER using the <code>FunctionSetAssignmentsListLink</code>. The server creates the <code>FunctionSetAssignmentsList</code> to link the <code>DERProgramList</code> with the appropriate <code>EndDevice</code> in the DER’s EndDevice instance.</td>
+<td>URI: <code>/dev/683475070343/fsa</code></td>
+</tr>
+<tr>
+<td><code>Time</code></td>
+<td>Utility server uses the Time function set to distribute the current time to clients</td>
+<td>URI: <code>/dev/683475070343/tm</code></td>
+</tr>
+<tr>
+<td><code>DERProgramList</code></td>
+<td>List of <code>DERProgram</code>s that provide a reference to the controls and curves associated with a specific DER management program</td>
+<td>URI: <code>/dev/683475070343/derp</code></td>
+</tr>
+<tr>
+<td><code>DERControlList</code></td>
+<td>List of control events that contains a start time, a duration, and a control parameter value</td>
+<td>URI: <code>/dev/683475070343/derc</code></td>
+</tr>
+<tr>
+<td><code>DERCurveList</code></td>
+<td>X-Y DERControl curves</td>
+<td>URI: <code>/dev/683475070343/dc</code></td>
+</tr>
+<tr>
+<td><code>DefaultDERControl</code></td>
+<td>DERControl used if there are no active DERControls for that resource</td>
+<td>URI: <code>/dev/683475070343/dderc</code></td>
+</tr>
+<tr>
+<td><code>MirrorUsagePointList</code></td>
+<td>MirrorUsagePoint (MUP) report mmeasured data from the resrouce</td>
+<td>URI: <code>/dev/683475070343/mup</code></td>
+</tr>
+</tbody>
+</table>
+<p>The DERProgram provides a reference to the controls and curves associated with a specific DER management program. The key components of the DERProgram are the primacy value (which sets the priority of this program) and the links to  <code>DefaultDERControl</code>, <code>DERControlListLink</code>, and <code>DERCurveListLink</code> for the DER device (<code>683475070343</code> in our case).
+<div class="highlight"><pre><span></span><code>&lt;DERProgramList xmlns=&quot;urn:ieee:std:2030.5:ns&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; href=&quot;/dev/683475070343/derp&quot; all=&quot;1&quot; results=&quot;1&quot; pollRate=&quot;30&quot;&gt;
+  &lt;DERProgram href=&quot;/dev/683475070343/derp/1&quot;&gt;
+    &lt;mRID&gt;00005B4EB2130000006F00009182&lt;/mRID&gt;
+    &lt;description&gt;DER Program 1&lt;/description&gt;
+    &lt;DefaultDERControlLink href=&quot;/dev/683475070343/dderc&quot;/&gt;
+    &lt;DERControlListLink href=&quot;/dev/683475070343/derc&quot; all=&quot;0&quot;/&gt;
+    &lt;DERCurveListLink href=&quot;/dev/683475070343/dc&quot; all=&quot;3&quot;/&gt;
+    &lt;primacy&gt;30&lt;/primacy&gt;
+  &lt;/DERProgram&gt;
+&lt;/DERProgramList&gt;
+</code></pre></div></p>
+<p>A <code>DERControl</code> is an IEEE 2030.5 control event that contains a start time, a duration, and a control parameter value.
+A <code>DefaultDERControl</code> is an IEEE 2030.5 control resource that is in effect if there are no active DERControls for that resource. In this case the <code>DefaultDERControl</code> XML data shows a Power Factor of 1.0 and a Active Power limit of 10 kW. 
+<div class="highlight"><pre><span></span><code>&lt;DefaultDERControl xmlns=&quot;urn:ieee:std:2030.5:ns&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; href=&quot;/dev/683475070343/dderc&quot;&gt;
+  &lt;mRID&gt;13000019&lt;/mRID&gt;
+  &lt;description&gt;Default DER Control&lt;/description&gt;
+  &lt;version&gt;1&lt;/version&gt;
+  &lt;DERControlBase&gt;
+    &lt;opModConnect&gt;true&lt;/opModConnect&gt;
+    &lt;opModEnergize&gt;true&lt;/opModEnergize&gt;
+    &lt;opModFixedPFInjectW&gt;
+      &lt;displacement&gt;1000&lt;/displacement&gt;
+      &lt;excitation&gt;false&lt;/excitation&gt;
+      &lt;multiplier&gt;-3&lt;/multiplier&gt;
+    &lt;/opModFixedPFInjectW&gt;
+    &lt;opModMaxLimW&gt;10000&lt;/opModMaxLimW&gt;
+  &lt;/DERControlBase&gt;
+&lt;/DefaultDERControl&gt;
+</code></pre></div></p>
+<p><code>DERCurves</code> are a type of <code>DERControl</code> that define behavior based on an X-Y curve instead of a fixed value. DERCurves are used to define the behavior of a DER in response to a sensed grid condition. These curves are already embedded in the DER. In this case, we see the DER device is pulling <code>Volt-Var Curve</code>, <code>Volt-Watt Curve</code>, and <code>Freq-Watt Curve</code> data from the server. </p>
+<div class="highlight"><pre><span></span><code>&lt;DERCurveList xmlns=&quot;urn:ieee:std:2030.5:ns&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; href=&quot;/dev/683475070343/dc&quot; all=&quot;3&quot; results=&quot;3&quot;&gt;
+  &lt;DERCurve href=&quot;/dev/683475070343/dc/1&quot;&gt;
+    &lt;mRID&gt;10005B4EB2130000006F00009182&lt;/mRID&gt;
+    &lt;description&gt;Volt-Var Curve&lt;/description&gt;
+    &lt;autonomousVRefEnable&gt;false&lt;/autonomousVRefEnable&gt;
+    &lt;autonomousVRefTimeConstant&gt;0&lt;/autonomousVRefTimeConstant&gt;
+    &lt;creationTime&gt;1572463755&lt;/creationTime&gt;
+    &lt;CurveData&gt;
+      &lt;xvalue&gt;9200&lt;/xvalue&gt;
+      &lt;yvalue&gt;3000&lt;/yvalue&gt;
+    &lt;/CurveData&gt;
+    &lt;CurveData&gt;
+      &lt;xvalue&gt;9670&lt;/xvalue&gt;
+      &lt;yvalue&gt;0&lt;/yvalue&gt;
+    &lt;/CurveData&gt;
+    &lt;CurveData&gt;
+      &lt;xvalue&gt;10300&lt;/xvalue&gt;
+      &lt;yvalue&gt;0&lt;/yvalue&gt;
+    &lt;/CurveData&gt;
+    &lt;CurveData&gt;
+      &lt;xvalue&gt;10700&lt;/xvalue&gt;
+      &lt;yvalue&gt;-3000&lt;/yvalue&gt;
+    &lt;/CurveData&gt;
+    &lt;curveType&gt;11&lt;/curveType&gt;
+    &lt;openLoopTms&gt;0&lt;/openLoopTms&gt;
+    &lt;vRef&gt;0&lt;/vRef&gt;
+    &lt;xMultiplier&gt;-2&lt;/xMultiplier&gt;
+    &lt;yMultiplier&gt;-2&lt;/yMultiplier&gt;
+    &lt;yRefType&gt;3&lt;/yRefType&gt;
+  &lt;/DERCurve&gt;
+  &lt;DERCurve href=&quot;/dev/683475070343/dc/2&quot;&gt;
+    &lt;mRID&gt;30005B4EB2130000006F00009182&lt;/mRID&gt;
+    &lt;description&gt;Volt-Watt Curve&lt;/description&gt;
+    &lt;creationTime&gt;1572463755&lt;/creationTime&gt;
+    &lt;CurveData&gt;
+      &lt;xvalue&gt;10000&lt;/xvalue&gt;
+      &lt;yvalue&gt;10000&lt;/yvalue&gt;
+    &lt;/CurveData&gt;
+    &lt;CurveData&gt;
+      &lt;xvalue&gt;10300&lt;/xvalue&gt;
+      &lt;yvalue&gt;10000&lt;/yvalue&gt;
+    &lt;/CurveData&gt;
+    &lt;CurveData&gt;
+      &lt;xvalue&gt;10800&lt;/xvalue&gt;
+      &lt;yvalue&gt;0&lt;/yvalue&gt;
+    &lt;/CurveData&gt;
+    &lt;curveType&gt;12&lt;/curveType&gt;
+    &lt;openLoopTms&gt;0&lt;/openLoopTms&gt;
+    &lt;xMultiplier&gt;-2&lt;/xMultiplier&gt;
+    &lt;yMultiplier&gt;-2&lt;/yMultiplier&gt;
+    &lt;yRefType&gt;1&lt;/yRefType&gt;
+  &lt;/DERCurve&gt;
+  &lt;DERCurve href=&quot;/dev/683475070343/dc/3&quot;&gt;
+    &lt;mRID&gt;30005B4EB2130000006F00009183&lt;/mRID&gt;
+    &lt;description&gt;Freq-Watt Curve&lt;/description&gt;
+    &lt;creationTime&gt;1572463755&lt;/creationTime&gt;
+    &lt;CurveData&gt;
+      &lt;xvalue&gt;6010&lt;/xvalue&gt;
+      &lt;yvalue&gt;10000&lt;/yvalue&gt;
+    &lt;/CurveData&gt;
+    &lt;CurveData&gt;
+      &lt;xvalue&gt;6200&lt;/xvalue&gt;
+      &lt;yvalue&gt;0&lt;/yvalue&gt;
+    &lt;/CurveData&gt;
+    &lt;curveType&gt;0&lt;/curveType&gt;
+    &lt;openLoopTms&gt;0&lt;/openLoopTms&gt;
+    &lt;xMultiplier&gt;-2&lt;/xMultiplier&gt;
+    &lt;yMultiplier&gt;-2&lt;/yMultiplier&gt;
+    &lt;yRefType&gt;1&lt;/yRefType&gt;
+  &lt;/DERCurve&gt;
+&lt;/DERCurveList&gt;
+</code></pre></div>
+<p>The IEEE 2030.5 Metering Mirror function set is used to report metrology data. Each of the monitoring data maps to a <code>ReadingType</code> specifying the unit of measure (<code>uom</code>) and <code>dataQualifier</code>. Here's an example of this data: </p>
+<div class="highlight"><pre><span></span><code>&lt;MirrorUsagePointList xmlns=&quot;urn:ieee:std:2030.5:ns&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; href=&quot;/dev/683475070343/mup&quot; all=&quot;1&quot; results=&quot;1&quot;&gt;
+  &lt;MirrorUsagePoint href=&quot;/dev/683475070343/mup/1&quot;&gt;
+    &lt;mRID&gt;00005B4EB2130000006E00009182&lt;/mRID&gt;
+    &lt;description&gt;DER [Inverter]&lt;/description&gt;
+    &lt;deviceLFDI&gt;FE9D4315AF233C2E9BFA89E3F5F9B645E5B157F2&lt;/deviceLFDI&gt;
+    &lt;MirrorMeterReading href=&quot;/dev/683475070343/mup/1/A&quot;&gt;
+      &lt;mRID&gt;00005B4EB2130000006E00009182&lt;/mRID&gt;
+      &lt;description&gt;Meter reading for Current(A-PhsAB)&lt;/description&gt;
+      &lt;MirrorReadingSet href=&quot;/dev/683475070343/mup/1/A/reading&quot;&gt;
+        &lt;Reading&gt;
+          &lt;value&gt;41.1&lt;/value&gt;
+        &lt;/Reading&gt;
+      &lt;/MirrorReadingSet&gt;
+      &lt;ReadingType&gt;
+        &lt;accumulationBehaviour&gt;4&lt;/accumulationBehaviour&gt;
+        &lt;uom&gt;5&lt;/uom&gt;
+      &lt;/ReadingType&gt;
+    &lt;/MirrorMeterReading&gt;
+    &lt;MirrorMeterReading href=&quot;/dev/683475070343/mup/1/V&quot;&gt;
+      &lt;mRID&gt;00005B4EB2130000006E00009182&lt;/mRID&gt;
+      &lt;description&gt;Meter reading for Voltage(V)&lt;/description&gt;
+      &lt;MirrorReadingSet href=&quot;/dev/683475070343/mup/1/V/reading&quot;&gt;
+        &lt;Reading&gt;
+          &lt;value&gt;280.58297661515286&lt;/value&gt;
+        &lt;/Reading&gt;
+      &lt;/MirrorReadingSet&gt;
+      &lt;ReadingType&gt;
+        &lt;accumulationBehaviour&gt;4&lt;/accumulationBehaviour&gt;
+        &lt;uom&gt;29&lt;/uom&gt;
+      &lt;/ReadingType&gt;
+    &lt;/MirrorMeterReading&gt;
+    &lt;MirrorMeterReading href=&quot;/dev/683475070343/mup/1/Hz&quot;&gt;
+      &lt;mRID&gt;00005B4EB2130000006E00009182&lt;/mRID&gt;
+      &lt;description&gt;Meter reading for Frequency(Hz)&lt;/description&gt;
+      &lt;MirrorReadingSet href=&quot;/dev/683475070343/mup/1/Hz/reading&quot;&gt;
+        &lt;Reading&gt;
+          &lt;value&gt;60.00080670484172&lt;/value&gt;
+        &lt;/Reading&gt;
+      &lt;/MirrorReadingSet&gt;
+      &lt;ReadingType&gt;
+        &lt;accumulationBehaviour&gt;4&lt;/accumulationBehaviour&gt;
+        &lt;uom&gt;33&lt;/uom&gt;
+      &lt;/ReadingType&gt;
+    &lt;/MirrorMeterReading&gt;
+    &lt;MirrorMeterReading href=&quot;/dev/683475070343/mup/1/W&quot;&gt;
+      &lt;mRID&gt;00005B4EB2130000006E00009182&lt;/mRID&gt;
+      &lt;description&gt;Meter reading for Real Power(W)&lt;/description&gt;
+      &lt;MirrorReadingSet href=&quot;/dev/683475070343/mup/1/W/reading&quot;&gt;
+        &lt;Reading&gt;
+          &lt;value&gt;4490.384027103559&lt;/value&gt;
+        &lt;/Reading&gt;
+      &lt;/MirrorReadingSet&gt;
+      &lt;ReadingType&gt;
+        &lt;accumulationBehaviour&gt;4&lt;/accumulationBehaviour&gt;
+        &lt;uom&gt;38&lt;/uom&gt;
+      &lt;/ReadingType&gt;
+    &lt;/MirrorMeterReading&gt;
+    &lt;MirrorMeterReading href=&quot;/dev/683475070343/mup/1/VA&quot;&gt;
+      &lt;mRID&gt;00005B4EB2130000006E00009182&lt;/mRID&gt;
+      &lt;description&gt;Meter reading for Apparent Power(VA)&lt;/description&gt;
+      &lt;MirrorReadingSet href=&quot;/dev/683475070343/mup/1/VA/reading&quot;&gt;
+        &lt;Reading&gt;
+          &lt;value&gt;0&lt;/value&gt;
+        &lt;/Reading&gt;
+      &lt;/MirrorReadingSet&gt;
+      &lt;ReadingType&gt;
+        &lt;accumulationBehaviour&gt;4&lt;/accumulationBehaviour&gt;
+        &lt;uom&gt;61&lt;/uom&gt;
+      &lt;/ReadingType&gt;
+    &lt;/MirrorMeterReading&gt;
+    &lt;MirrorMeterReading href=&quot;/dev/683475070343/mup/1/Var&quot;&gt;
+      &lt;mRID&gt;00005B4EB2130000006E00009182&lt;/mRID&gt;
+      &lt;description&gt;Meter reading for Reactive Power(Var)&lt;/description&gt;
+      &lt;MirrorReadingSet href=&quot;/dev/683475070343/mup/1/Var/reading&quot;&gt;
+        &lt;Reading&gt;
+          &lt;value&gt;0.18003588102062637&lt;/value&gt;
+        &lt;/Reading&gt;
+      &lt;/MirrorReadingSet&gt;
+      &lt;ReadingType&gt;
+        &lt;accumulationBehaviour&gt;4&lt;/accumulationBehaviour&gt;
+        &lt;uom&gt;63&lt;/uom&gt;
+      &lt;/ReadingType&gt;
+    &lt;/MirrorMeterReading&gt;
+    &lt;MirrorMeterReading href=&quot;/dev/683475070343/mup/1/PF&quot;&gt;
+      &lt;mRID&gt;00005B4EB2130000006E00009182&lt;/mRID&gt;
+      &lt;description&gt;Meter reading for Power Factor(PF)&lt;/description&gt;
+      &lt;MirrorReadingSet href=&quot;/dev/683475070343/mup/1/PF/reading&quot;&gt;
+        &lt;Reading&gt;
+          &lt;value&gt;1.0&lt;/value&gt;
+        &lt;/Reading&gt;
+      &lt;/MirrorReadingSet&gt;
+      &lt;ReadingType&gt;
+        &lt;accumulationBehaviour&gt;4&lt;/accumulationBehaviour&gt;
+        &lt;uom&gt;65&lt;/uom&gt;
+      &lt;/ReadingType&gt;
+    &lt;/MirrorMeterReading&gt;
+    &lt;MirrorMeterReading href=&quot;/dev/683475070343/mup/1/VAh&quot;&gt;
+      &lt;mRID&gt;00005B4EB2130000006E00009182&lt;/mRID&gt;
+      &lt;description&gt;Apparent Energy (VAh)&lt;/description&gt;
+      &lt;MirrorReadingSet href=&quot;/dev/683475070343/mup/1/VAh/reading&quot;&gt;
+        &lt;Reading&gt;
+          &lt;value&gt;0&lt;/value&gt;
+        &lt;/Reading&gt;
+      &lt;/MirrorReadingSet&gt;
+      &lt;ReadingType&gt;
+        &lt;accumulationBehaviour&gt;4&lt;/accumulationBehaviour&gt;
+        &lt;uom&gt;71&lt;/uom&gt;
+      &lt;/ReadingType&gt;
+    &lt;/MirrorMeterReading&gt;
+    &lt;MirrorMeterReading href=&quot;/dev/683475070343/mup/1/Wh&quot;&gt;
+      &lt;mRID&gt;00005B4EB2130000006E00009182&lt;/mRID&gt;
+      &lt;description&gt;Real Energy in Watt-hours (Wh)&lt;/description&gt;
+      &lt;MirrorReadingSet href=&quot;/dev/683475070343/mup/1/Wh/reading&quot;&gt;
+        &lt;Reading&gt;
+          &lt;value&gt;0.0&lt;/value&gt;
+        &lt;/Reading&gt;
+      &lt;/MirrorReadingSet&gt;
+      &lt;ReadingType&gt;
+        &lt;accumulationBehaviour&gt;4&lt;/accumulationBehaviour&gt;
+        &lt;uom&gt;72&lt;/uom&gt;
+      &lt;/ReadingType&gt;
+    &lt;/MirrorMeterReading&gt;
+    &lt;MirrorMeterReading href=&quot;/dev/683475070343/mup/1/VArh&quot;&gt;
+      &lt;mRID&gt;00005B4EB2130000006E00009182&lt;/mRID&gt;
+      &lt;description&gt;Reactive Energy (VArh)&lt;/description&gt;
+      &lt;MirrorReadingSet href=&quot;/dev/683475070343/mup/1/VArh/reading&quot;&gt;
+        &lt;Reading&gt;
+          &lt;value&gt;0.0&lt;/value&gt;
+        &lt;/Reading&gt;
+      &lt;/MirrorReadingSet&gt;
+      &lt;ReadingType&gt;
+        &lt;accumulationBehaviour&gt;4&lt;/accumulationBehaviour&gt;
+        &lt;uom&gt;73&lt;/uom&gt;
+      &lt;/ReadingType&gt;
+    &lt;/MirrorMeterReading&gt;
+    &lt;MirrorMeterReading href=&quot;/dev/683475070343/mup/1/Ah&quot;&gt;
+      &lt;mRID&gt;00005B4EB2130000006E00009182&lt;/mRID&gt;
+      &lt;description&gt;Ampere-hours / Available Charge (Ah)&lt;/description&gt;
+      &lt;MirrorReadingSet href=&quot;/dev/683475070343/mup/1/Ah/reading&quot;&gt;
+        &lt;Reading&gt;
+          &lt;value&gt;0&lt;/value&gt;
+        &lt;/Reading&gt;
+      &lt;/MirrorReadingSet&gt;
+      &lt;ReadingType&gt;
+        &lt;accumulationBehaviour&gt;4&lt;/accumulationBehaviour&gt;
+        &lt;uom&gt;106&lt;/uom&gt;
+      &lt;/ReadingType&gt;
+    &lt;/MirrorMeterReading&gt;
+    &lt;postRate&gt;40&lt;/postRate&gt;
+  &lt;/MirrorUsagePoint&gt;
+&lt;/MirrorUsagePointList&gt;
+</code></pre></div>
+</li>
+<li>
+<p>Think about the difference with IEEE 2030.5 vs SunSpec Modbus.  Similar data is exchanged between the DER and DERMS but the IEEE 2030.5 traffic is encrypted and resistant to replay and machine-in-the-middle attacks. For this reason, unencrypted SunSpec Modbus should only used locally within physically secure DER plants.  Internet-routed DER data should always be encrypted using IEEE 2030.5 or another protocol. </p>
+</li>
+</ol>
+<h1 id="host-based_firewalls">Host-based Firewalls<a class="headerlink" href="#host-based_firewalls" title="Permanent link">&para;</a></h1>
+<p>It is possible to provide highly granular rules around inbound and outbound traffic at multiple levels in the DER communication network. One place networking rules can be added are on device endpoints like the DER equipment.  In this section you will see how host-based firewall rules applied on the DER can be created to prevent the adversary from interacting with the DER device while still allowing the DERMS to interact with the equipment. </p>
+<ol>
+<li>
+<p>From the <strong>Kali</strong> machine, open a browser and go to <code>10.10.0.100</code> to pull up the DER website. It should load like normal. </p>
+</li>
+<li>
+<p>From the <strong>Windows DERMS</strong> machine, open a browser and go to <code>10.10.0.100</code> to pull up the DER website. </p>
+</li>
+<li>
+<p>From Kali, log into the DER device using our <code>deradmin</code> account with password <code>password1</code>. You may have to accept the fingerprint if this is the first time logging into the machine. </p>
+</li>
+<li>
+<p>Let's look at the Uncomplicated Firewall (UFW) rules that are currently enabled on the machine. </p>
+<p><code>sudo ufw status numbered</code></p>
+</li>
+<li>
+<p>The DER is allowing TCP connections to port 80 from any IP address.  Let's lock that down to only the DERMS system using the following: </p>
+<p><code>sudo ufw delete &lt;Number for 80/tcp&gt;</code></p>
+<p><img alt="ifconfig" src="../img/FW-rules.PNG" /></p>
+</li>
+<li>
+<p>Now try to get on the website at <code>10.10.0.100</code> from both the kali and the windows DERMS machines.  You cannot reach the website because there is a deny-by-default rule.  However, we want the DERMS (<code>10.10.0.50</code>) to be able to get on the website and not the Kali machine (<code>10.10.0.10</code>).  We can enable this with a new UFW rule.  On the SSH session, enter the following: </p>
+<p><code>sudo ufw allow from 10.10.0.50 to any port 80</code></p>
+<p><img alt="ifconfig" src="../img/FW-update.PNG" /></p>
+</li>
+<li>
+<p>Now attempt to reach the website from both the Kali and Windows VMs and you will see that only the windows DERMS machine can access the website!</p>
+</li>
+<li>
+<p>If you like you can do the same thing for the Modbus interface as well.  </p>
+<p><code>sudo ufw delete &lt;port 502 rule for IPv4&gt;</code></p>
+<p><code>sudo ufw delete &lt;port 502 rule for IPv6&gt;</code></p>
+<p><code>sudo ufw allow from 10.10.0.50 to any port 502</code>    </p>
+<p><img alt="ifconfig" src="../img/FW-modbus-lockdown.PNG" /></p>
+</li>
+<li>
+<p>From the DERMS, use the SVP Dashboard to connect to the DER (IP = <code>10.10.0.100</code>, port = <code>502</code>). Notice it works fine.  In a new Kali terminal, try to run <code>python3 ~/scapy_replay_simple.py</code> and <code>python3 ~/modbus_attack.py</code>.  The first one hangs and can be cancelled with <code>Ctrl</code> + <code>c</code> and the 2nd fails to establish the Modbus connection and crashes. That's a good thing. </p>
+<p><img alt="ifconfig" src="../img/Modbus-fail.PNG" /></p>
+</li>
+</ol>
+<h1 id="lessons_learned">Lessons learned<a class="headerlink" href="#lessons_learned" title="Permanent link">&para;</a></h1>
+<p>In this lesson we saw a few different ways of improving the security of the DER device by using an encrypted communication protocol that did not allow for Replay or MITM attacks.  You also saw the power of creating good firewall rules in locking out all unauthorized users. By blocking only those devices that need access using host-based and other firewalls, adversaries will find reconnaissance and device interaction/manipulation far more difficult. </p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="over_lab8.html" class="btn btn-neutral float-left" title="Overview, Goals, Prerequisites"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../about.html" class="btn btn-neutral float-right" title="About">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>2022 National Technology and Engineering Solutions of Sandia, LLC</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="over_lab8.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../about.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
