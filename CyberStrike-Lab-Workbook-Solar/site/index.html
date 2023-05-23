@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="description" content="None" />
+      <link rel="shortcut icon" href="img/favicon.ico" />
+    <title>CyberStrike Lab Workbook</title>
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Home";
+        var mkdocs_page_input_path = "index.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="index.html" class="icon icon-home"> CyberStrike Lab Workbook
+        </a>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="index.html">Home</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#labs">Labs</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#usage">Usage</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Overview</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="overview/labs_over.html">Laboratory Background Info</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 1 - Exploiting DER Interfaces</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="lab-2/over_lab2.html">Overview, Goals, Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="lab-2/recon_nmap2.html">Reconnaissance with Nmap</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="lab-2/brute_force_ssh2.html">Brute Forcing SSH Passwords</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 2 - DOS Attacks</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="lab-3/over_lab4.html">Overview, Goals, Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="lab-3/dos.html">Denial of Service (DOS)</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 3 - Firmware Analysis</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="lab-4/over_lab3b.html">Overview, Goals, and Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="lab-4/der_firmware.html">Investigating DER Firmware</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 4 - Firmware Cryptography</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="lab-4/over_lab3.html">Overview, Goals, and Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="lab-4/malicious_update.html">Malicious Firmware</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="lab-4/encrypt_decrypt_data3.html">Encrypting/Decrypting Data (optional)</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 5 - Web Exploitation</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="lab-5/over_lab5.html">Overview, Goals, Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="lab-5/web_exploit.html">Website Exploits</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="lab-5/control_der_vnc5.html">Controlling the DER through VNC</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 6 - Vulnerable API and App Security</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="lab-6/over_lab6.html">Overview, Goals, Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="lab-6/interacting_api.html">Vulnerable API</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="lab-6/app_inspect.html">Smart Phone App Inspection</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 7 - Replay and MITM Attacks</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="lab-7/over_lab7.html">Overview, Goals, Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="lab-7/replay-mitm.html">Replay and MITM</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 8 - Security Improvements</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="lab-8/over_lab8.html">Overview, Goals, Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="lab-8/20305firewalls.html">IEEE 2030.5 and FWs</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="about.html">About</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">CyberStrike Lab Workbook</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html" class="icon icon-home" alt="Docs"></a> &raquo;</li>
+      <li>Home</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="welcome_to_the_cyberstrike_lab_workbook">Welcome to the CyberStrike Lab Workbook<a class="headerlink" href="#welcome_to_the_cyberstrike_lab_workbook" title="Permanent link">&para;</a></h1>
+<p><img alt="Title Page" src="img/title.png" /></p>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<p>These labs have been developed to mimic a real-world scenario in which a single-axis, 
+utility-scale photovoltaic system is generating power. A simulated distributed energy 
+resource inverter is included with has SunSpec Modbus and IEEE 2030.5 communication 
+interfaces. The single-axis tracking system includes a Modbus control system. Site 
+perimeter defenses are not included but can be subverted through several means.</p>
+<p>The labs listed below will walk through various exercises to demonstrate how an attacker 
+can gather information, use that information to identify vulnerabilities or gather 
+additional sensitive information, interrupt/control the process, and finally how proactive 
+measures can prevent such attacks.</p>
+<p>The cybersecurity labs are based on several open-source reports and resources including:</p>
+<ol>
+<li>2015 and 2016 Ukraine cyber events <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> <sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
+<li>DEF CON talk on solar gateway hacking <sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup></li>
+<li>Sandia and INL pen testing experience with DER and solar equipment <sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup></li>
+<li>sPower Attack –Vulnerable router targeted at national firm. <sup id="fnref:5"><a class="footnote-ref" href="#fn:5">5</a></sup></li>
+<li>Known solar vulnerabilities<ul>
+<li>Plaintext password storage in stand-alone system for the monitoring 
+   and management of local and remote maintenance of small size PV <sup id="fnref:6"><a class="footnote-ref" href="#fn:6">6</a></sup></li>
+<li>SMA Solar Technology AG Sunny WebBox <sup id="fnref:7"><a class="footnote-ref" href="#fn:7">7</a></sup></li>
+<li>Solar Controls’ WATTConfig M Software <sup id="fnref:8"><a class="footnote-ref" href="#fn:8">8</a></sup></li>
+<li>IBC Solar <sup id="fnref:9"><a class="footnote-ref" href="#fn:9">9</a></sup></li>
+<li>Schneider Electric Conext ComBox <sup id="fnref:10"><a class="footnote-ref" href="#fn:10">10</a></sup></li>
+</ul>
+</li>
+</ol>
+<h2 id="labs">Labs<a class="headerlink" href="#labs" title="Permanent link">&para;</a></h2>
+<p><strong>Lab 1:</strong> Open-Source Intelligence (OSINT)  <br />
+<strong>Lab 2:</strong> Exploiting DER Interfaces  <br />
+<strong>Lab 3:</strong> DER Firmware and Cryptography  <br />
+<strong>Lab 4:</strong> Denial of Service (DoS) <br />
+<strong>Lab 5:</strong> Web Exploitation<br />
+<strong>Lab 6:</strong> Vulnerable API and Smart Phone App Security  <br />
+<strong>Lab 7:</strong> Replay and Machine-in-the-Middle (MITM) Attacks <br />
+<strong>Lab 8:</strong> Preventing Attacks via Encryption and Firewall Rules   </p>
+<p>The labs require a substantial amount of time, so please work with your instructor to determine which of the labs should be completed in your class. Here are some lab suggestions based Distributed Energy Resource (DER) ecosystem roles:  </p>
+<table>
+<thead>
+<tr>
+<th align="left">Who</th>
+<th align="left">Time</th>
+<th align="left">Lab 1</th>
+<th align="left">Lab 2</th>
+<th align="left">Lab 3A</th>
+<th align="left">Lab 3B</th>
+<th align="left">Lab 4</th>
+<th align="left">Lab 5</th>
+<th align="left">Lab 6</th>
+<th align="left">Lab 7</th>
+<th align="left">Lab 8</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">Reconn</td>
+<td align="left">DER Interfaces</td>
+<td align="left">Crypto</td>
+<td align="left">Code Signing</td>
+<td align="left">DoS Attack</td>
+<td align="left">Web Exploits</td>
+<td align="left">APIs + Apps</td>
+<td align="left">Reply/MitM</td>
+<td align="left">Security Improvements</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">25 min</td>
+<td align="left">15 min</td>
+<td align="left">35 min</td>
+<td align="left">25 min</td>
+<td align="left">30 min</td>
+<td align="left">30 min</td>
+<td align="left">60 min</td>
+<td align="left">45 min</td>
+<td align="left">40 min</td>
+</tr>
+<tr>
+<td align="left">Government</td>
+<td align="left">3h5m</td>
+<td align="left">X</td>
+<td align="left">X</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">X</td>
+<td align="left">X</td>
+<td align="left"></td>
+<td align="left">X</td>
+<td align="left">X</td>
+</tr>
+<tr>
+<td align="left">Utility</td>
+<td align="left">2h45m</td>
+<td align="left">X</td>
+<td align="left">X</td>
+<td align="left"></td>
+<td align="left">X</td>
+<td align="left">X</td>
+<td align="left">X</td>
+<td align="left"></td>
+<td align="left">X</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">DER Vendor</td>
+<td align="left">3h55m</td>
+<td align="left"></td>
+<td align="left">X</td>
+<td align="left">X</td>
+<td align="left">X</td>
+<td align="left"></td>
+<td align="left">X</td>
+<td align="left">X</td>
+<td align="left">X</td>
+<td align="left">X</td>
+</tr>
+<tr>
+<td align="left">DER Aggregator/Operator</td>
+<td align="left">3h5m</td>
+<td align="left">X</td>
+<td align="left">X</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">X</td>
+<td align="left">X</td>
+<td align="left"></td>
+<td align="left">X</td>
+<td align="left">X</td>
+</tr>
+<tr>
+<td align="left">C-Suite, e.g., CEO, CFO, CISO</td>
+<td align="left">3h5m</td>
+<td align="left">X</td>
+<td align="left">X</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">X</td>
+<td align="left">X</td>
+<td align="left"></td>
+<td align="left">X</td>
+<td align="left">X</td>
+</tr>
+<tr>
+<td align="left">Online Students</td>
+<td align="left">4h50m</td>
+<td align="left">X</td>
+<td align="left">X</td>
+<td align="left">X</td>
+<td align="left">X</td>
+<td align="left">X</td>
+<td align="left">X</td>
+<td align="left">X</td>
+<td align="left">X</td>
+<td align="left">X</td>
+</tr>
+</tbody>
+</table>
+<h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
+<p>Use the links on the left to navigate to the desired exercise.</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p><a href="https://www.wired.com/2016/03/inside-cunning-unprecedented-hack-ukraines-power-grid/">https://www.wired.com/2016/03/inside-cunning-unprecedented-hack-ukraines-power-grid/</a>&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p><a href="https://www.wired.com/story/russian-hackers-attack-ukraine/">https://www.wired.com/story/russian-hackers-attack-ukraine/</a>&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>Fred Bret-Mounet, “All Your Solar Panels are belong to Me,” DEF CON, August 4–7, 2016.&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:4">
+<p>C. Carter, I. Onunkwo, P. Cordeiro, J. Johnson, “Cyber Security Assessments of Distributed Energy Resources,” IEEE PVSC, Washington, DC, 25-30 Jun 2017.&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:5">
+<p><a href="https://www.cyberscoop.com/spower-power-grid-cyberattack-foia/">https://www.cyberscoop.com/spower-power-grid-cyberattack-foia/</a>&#160;<a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:6">
+<p><a href="https://www.cisa.gov/uscert/ics/advisories/ICSA-15-160-02">https://www.cisa.gov/uscert/ics/advisories/ICSA-15-160-02</a>&#160;<a class="footnote-backref" href="#fnref:6" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+<li id="fn:7">
+<p><a href="https://www.cisa.gov/uscert/ics/advisories/icsa-19-281-01">https://www.cisa.gov/uscert/ics/advisories/icsa-19-281-01</a>
+<a href="https://www.cisa.gov/uscert/ics/advisories/ICSA-15-181-02A">https://www.cisa.gov/uscert/ics/advisories/ICSA-15-181-02A</a>&#160;<a class="footnote-backref" href="#fnref:7" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+</li>
+<li id="fn:8">
+<p><a href="https://www.cisa.gov/uscert/ics/advisories/ICSA-17-222-03">https://www.cisa.gov/uscert/ics/advisories/ICSA-17-222-03</a>&#160;<a class="footnote-backref" href="#fnref:8" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+</li>
+<li id="fn:9">
+<p><a href="https://www.cisa.gov/uscert/ics/advisories/ICSA-15-265-02">https://www.cisa.gov/uscert/ics/advisories/ICSA-15-265-02</a>&#160;<a class="footnote-backref" href="#fnref:9" title="Jump back to footnote 9 in the text">&#8617;</a></p>
+</li>
+<li id="fn:10">
+<p><a href="https://www.cisa.gov/uscert/ics/advisories/ICSA-17-061-02">https://www.cisa.gov/uscert/ics/advisories/ICSA-17-061-02</a>&#160;<a class="footnote-backref" href="#fnref:10" title="Jump back to footnote 10 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="overview/labs_over.html" class="btn btn-neutral float-right" title="Laboratory Background Info">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>2022 National Technology and Engineering Solutions of Sandia, LLC</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+      <span><a href="overview/labs_over.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '.';</script>
+    <script src="js/theme_extra.js" defer></script>
+    <script src="js/theme.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
+
+<!--
+MkDocs version : 1.3.1
+Build Date UTC : 2023-05-02 15:59:48.580371+00:00
+-->

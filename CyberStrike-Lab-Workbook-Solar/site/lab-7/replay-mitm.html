@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Replay and MITM - CyberStrike Lab Workbook</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Replay and MITM";
+        var mkdocs_page_input_path = "lab-7\\replay-mitm.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../index.html" class="icon icon-home"> CyberStrike Lab Workbook
+        </a>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Overview</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../overview/labs_over.html">Laboratory Background Info</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 1 - Exploiting DER Interfaces</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-2/over_lab2.html">Overview, Goals, Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-2/recon_nmap2.html">Reconnaissance with Nmap</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-2/brute_force_ssh2.html">Brute Forcing SSH Passwords</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 2 - DOS Attacks</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-3/over_lab4.html">Overview, Goals, Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-3/dos.html">Denial of Service (DOS)</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 3 - Firmware Analysis</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-4/over_lab3b.html">Overview, Goals, and Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-4/der_firmware.html">Investigating DER Firmware</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 4 - Firmware Cryptography</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-4/over_lab3.html">Overview, Goals, and Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-4/malicious_update.html">Malicious Firmware</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-4/encrypt_decrypt_data3.html">Encrypting/Decrypting Data (optional)</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 5 - Web Exploitation</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-5/over_lab5.html">Overview, Goals, Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-5/web_exploit.html">Website Exploits</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-5/control_der_vnc5.html">Controlling the DER through VNC</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 6 - Vulnerable API and App Security</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-6/over_lab6.html">Overview, Goals, Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-6/interacting_api.html">Vulnerable API</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-6/app_inspect.html">Smart Phone App Inspection</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 7 - Replay and MITM Attacks</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="over_lab7.html">Overview, Goals, Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Exercises</a>
+    <ul class="current">
+                <li class="toctree-l2 current"><a class="reference internal current" href="replay-mitm.html">Replay and MITM</a>
+    <ul class="current">
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 8 - Security Improvements</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-8/over_lab8.html">Overview, Goals, Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-8/20305firewalls.html">IEEE 2030.5 and FWs</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../about.html">About</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">CyberStrike Lab Workbook</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html" class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Lab 7 - Replay and MITM Attacks &raquo;</li>
+          <li>Exercises &raquo;</li>
+      <li>Replay and MITM</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="replay_attack_on_der">Replay Attack on DER<a class="headerlink" href="#replay_attack_on_der" title="Permanent link">&para;</a></h1>
+<ol>
+<li>
+<p>In order to craft a Modbus replay attack on the DER device, we need to intercept the traffic from the DERMS to the DER.  This can be done with mirror/SPAN ports, network taps, or using Address Resolution Protocol (ARP) Spoofing.  In this case we will use ARP spoofing, wherein the DERMS&lt;--&gt;DER trafic passes through the Kali machine, as shown in red below. </p>
+<p><img alt="ARP Spoofing" src="../img/ARPspoofing.png" /></p>
+</li>
+<li>
+<p>On your Kali Linux VM, open a terminal using <code>Ctrl</code> + <code>Alt</code> + <code>t</code>.  Determine your ethernet interface with <code>ip a</code>. </p>
+<p><img alt="ifconfig" src="../img/kali_ifconfig2.PNG" /></p>
+<p>There are three ethernet interfaces on this Kali VM.  The first is the loopback interface <code>lo</code>, the second is VM NAT network interface <code>eth0</code>, and the last is the NIC on the <code>10.10.0.10/24</code> network. We want to use the last one. </p>
+</li>
+<li>
+<p>Start a Wireshark session by clicking on the Kali Linux icon in the upper left, going to <code>09 - Sniffing % Spoofing</code> -&gt; <code>wireshark</code>. </p>
+<p>Start a session on <code>eth1</code>. </p>
+</li>
+<li>
+<p>On your Windows machine, open the SVP Dashboard and connect to the DER device. Click on the link to open <code>http://localhost:8444</code> in the Firefox browser. Go to <code>Device</code> -&gt; <code>Open...</code> and enter the following:</p>
+<p><code>Device Type: Modbus TCP</code><br />
+<code>IP Address: 10.10.0.100</code><br />
+<code>IP Port: 502</code><br />
+<code>Slave ID: 1</code><br />
+<code>Timeout (secs): 5</code></p>
+<p>Click <code>Open</code>. </p>
+</li>
+<li>
+<p>You should see the Modbus Common Model (model 1) data for the DER device as before. To get that information there was a holding register read of the Modbus server running on the DER device.  Go back to the Wireshark session on the Kali machine and filter for <code>modbus</code>.  You should not see any traffic. This is because the switch between the machines only directs traffic to IP addresses associated with their Media Access Control (MAC) address. The Address Resolution Protocol (ARP) is used to determine the mapping between IP address and MAC addresses.  However, this protocol can be abused to sniff traffic between endpoints by telling the networking equipment that our MAC address is actually associated with the IPs where the traffic is being sent. </p>
+</li>
+<li>
+<p>We will use <code>ettercap</code>, a multipurpose sniffer/content filter, to capture traffic running from the DERMS to the DER with the following command.  Enter this in a new terminal: </p>
+<p><code>sudo ettercap -T --iface eth1 -M arp:remote /10.10.0.100// /10.10.0.50//</code></p>
+<p>Enter the Kali password, <code>kali</code>, if prompted.</p>
+<p>This command says that we'll be poisoning the ARP tables to intercept traffic between <code>10.10.0.100</code> and <code>10.10.0.50</code>.  Once it's running you can type <code>h</code> to see the list of commands: </p>
+<div class="highlight"><pre><span></span><code>Inline help:
+ [vV]      - change the visualization mode
+ [pP]      - activate a plugin
+ [fF]      - (de)activate a filter
+ [lL]      - print the hosts list
+ [oO]      - print the profiles list
+ [cC]      - print the connections list
+ [rR]      - adjust SSL intercept rules
+ [sS]      - print interfaces statistics
+ [&lt;space&gt;] - stop/cont printing packets
+ [qQ]      - quit
+</code></pre></div>
+<p>You can then type <code>L</code> to pring the hosts list:</p>
+<div class="highlight"><pre><span></span><code>Hosts list:
+1)      10.10.0.50      00:0C:29:A8:0A:BE
+2)      10.10.0.100     00:0C:29:1A:2C:0B
+</code></pre></div>
+</li>
+<li>
+<p>Now go back to the Windows machine and click the <code>Read</code> button at the bottom of the SVP Dashboard three times.</p>
+</li>
+<li>
+<p>Go back to the Kali machine and look at the Modbus traffic in Wireshark.  You should see traffic indicating a <code>Function Code: Read Holding Registers (3)</code></p>
+<p><img alt="ettercap" src="../img/ettercap.PNG" /></p>
+</li>
+<li>
+<p>Now let's change the DER power using the SVP on the Windows DERMS machine. Go to tab <code>704</code> which is for the <code>DER AC Controls (DERCtlAC)</code> SunSpec Model.  To give a sense of how the SunSpec Controls function, we will limit the output power to a percentage of the maximum active power.  </p>
+<p>Set the value of <code>Limit Max Power Pct Enable (WMaxLimPctEna)</code> to <code>1</code>, to enable this curtailment function. </p>
+<p>Set the value of <code>Limit Max Power Pct Setpoint (WMaxLimPct)</code> to <code>100</code>, which with the scaling factor is actually 10% of the Nameplate Active Power of the DER or 1000 W. </p>
+<p>Press the <code>Write</code> button at the bottom of the SVP Dashboard. </p>
+</li>
+<li>
+<p>You can write different values to <code>Limit Max Power Pct Setpoint (WMaxLimPct)</code> to adjust the level of inverter curtailment. </p>
+<p>The power change from the DER can be seen on the DER website <code>http://10.10.0.100</code> or in the <code>Active Power (W)</code> in SunSpec Model <code>701</code>.</p>
+<p><img alt="ifconfig" src="../img/DER_Active_Power_Change_3.PNG" /></p>
+</li>
+<li>
+<p>Write a <code>0</code> to <code>Limit Max Power Pct Enable (WMaxLimPctEna)</code> to disable this function in the DER.  </p>
+</li>
+<li>
+<p>Switch back to the Kali machine and let's look at the traffic between the DERMS and the DER.  In the Wireshark application enter a filter of <code>modbus</code> and see if you can see the traffic from the DERMS at <code>10.10.0.50</code> and the DER at <code>10.10.0.100</code>.</p>
+<p><img alt="ifconfig" src="../img/replay_wireshark_capture.PNG" /></p>
+</li>
+<li>
+<p>You should be able to scroll down through the list of Modbus packets in the upper pane to identify a Modbus write command.  This will include data in the <code>Info</code> column that reads similar to <code>Query: Trans: 0; Unit: 1, Func: 16: Write Multiple Registers</code>.  Select this packet. </p>
+<p>In the middle pane of Wireshark, you can expand the <code>Modbus</code> information to reveal the application layer data.  This data includes the values that the DERMS wrote to the DER.  In the packet below, the DERMS enabled the <code>Limit Max Power Pct</code> by sending a unsigned 16-bit integer (UINT16) to Modbus Register 40310 and a 100 UINT16 to Register 40311.  You will recall these are the values that were written by the DERMS.  </p>
+<p><img alt="ifconfig" src="../img/replay_modbus_writes.PNG" /></p>
+</li>
+<li>
+<p>With this packet still selected, go to <code>File</code> -&gt; <code>Export Specified Packets...</code>.  Save the pcapng file to <code>/home/kali</code> with a name <code>replay.pcap</code> using the <code>Export as:</code> drop down menu.  Make sure to only export the selected packet my selecting <code>Selected packets only</code>. </p>
+<p><img alt="ifconfig" src="../img/save_packet.PNG" /></p>
+<p><img alt="ifconfig" src="../img/save_packet2.PNG" /></p>
+</li>
+<li>
+<p>Some Python code was created to modify the captured Modbus message using scapy and send it to the DER device. Take a look at the code using the following command: </p>
+<p><code>mousepad ~/replay_attack.py</code></p>
+<p>You can see how certain TCP/IP and application layer fields are changed from the first <code>replay.pcap</code> packet. Close the mousepad window after reviewing the code.  </p>
+</li>
+<li>
+<p>Run the code to change the DER power to 15% of nameplate. </p>
+<p><code>sudo python3 ~/replay_attack.py</code></p>
+<p>Examine the script output to see how the packet was modified from the captured version and then sent to the DER device. </p>
+</li>
+<li>
+<p>Another option for an adversary is to craft a new Modbus packet to impact the equipment.  An attacker can use the information gained from their passive network monitoring reconnaissance to determine the Modbus registers for these functions.  With this context, an attacker could directly communicate with the Modbus server on the DER device directly.  The structure of a Modbus TCP message is:</p>
+<table>
+<thead>
+<tr>
+<th>Transaction Id</th>
+<th>Protocol</th>
+<th>Length</th>
+<th>Unit Address</th>
+<th>Message</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2 Bytes</td>
+<td>2 Bytes</td>
+<td>2 Bytes</td>
+<td>1 Byte</td>
+<td>N Bytes</td>
+</tr>
+</tbody>
+</table>
+<p>where:</p>
+<ul>
+<li>The <code>Transaction Id</code> field identifies the transaction.</li>
+<li>The <code>Protocol</code> field is zero to indicate Modbus protocol.</li>
+<li>The <code>Length</code> field is the number of following bytes.</li>
+<li>The <code>Unit Address</code> field is the PLC Address encoded as single byte.</li>
+<li>The <code>Message</code> field is a Modbus PDU. The maximum length of the Message field is is 253 bytes.</li>
+<li>The maximum Modbus TCP message length is 260 bytes.</li>
+</ul>
+<p>To make things easier, a Python script was written to communicate with this DER device using pymodbus. Take a look at the code with the following command.</p>
+<p><code>mousepad ~/modbus_attack.py</code></p>
+<p>The important lines are writing values to fixed Modbus registers in the <code>attack()</code> method.</p>
+<div class="highlight"><pre><span></span><code>rsp = der.write_registers(40311, target_pct*10, unit=1)
+rsp2 = der.write_registers(40310, reg_ena_value, unit=1)
+</code></pre></div>
+<p>Close the mousepad window after reviewing the code. </p>
+</li>
+<li>
+<p>Run the code with <code>python3 ~/modbus_attack.py -t 20</code> to set the curtailment to 20% of nameplate.  Go back to the Windows DERMS machine and verify the change in the SVP Dashboard.  Try different target values:</p>
+<p><code>python3 ~/modbus_attack.py -t 20</code></p>
+<p><code>python3 ~/modbus_attack.py -t 80</code></p>
+<p><code>python3 ~/modbus_attack.py -t 35</code></p>
+</li>
+<li>
+<p>To disable the Limit Max Power Pct function, run the following: </p>
+<p><code>python3 ~/modbus_attack.py -clean True</code>.</p>
+</li>
+</ol>
+<h1 id="machine_in_the_middle_mitm">Machine in the Middle (MITM)<a class="headerlink" href="#machine_in_the_middle_mitm" title="Permanent link">&para;</a></h1>
+<ol>
+<li>
+<p>To perform the MITM attack, instead of using <code>ettercap</code> to just monitor Modbus traffic, we will apply a filter to actively change the traffic on the way to it's destination.  First, let's look at a filter that changes all data that contains <code>1000</code> to <code>200</code>: </p>
+<p><code>cat ~/mb_filter</code></p>
+<p>You can see that this replaces the hex string <code>\x03\xe8</code> (1000) with <code>\x00\xc8</code> (200). </p>
+<p><img alt="ettercap filter" src="../img/ettercap_filter.PNG" /></p>
+</li>
+<li>
+<p>Now let's compile this code: </p>
+<p><code>etterfilter mb_filter -o mb_filter.ef</code></p>
+</li>
+<li>
+<p>Then use <code>ettercap</code> to apply this filter to the DER device with the following command: </p>
+<p><code>sudo ettercap -T -q --iface eth1 -F mb_filter.ef -M ARP /10.10.0.100// ///</code></p>
+<p>Enter the Kali password, <code>kali</code>, if prompted.</p>
+</li>
+<li>
+<p>Now let's go to the DERMS computer and write a few different value for <code>Limit Max Power Pct Setpoint (WMaxLimPct)</code> in the 704 tab of the SVP.  </p>
+<ul>
+<li>Enter a 100 for <code>WMaxLimPct</code> to set the power to 10%. Check to see if there was anything reported on the Kali machine. </li>
+<li>Enter a 300 for <code>WMaxLimPct</code> to set the power to 30%. Check to see if there was anything reported on the Kali machine. </li>
+<li>Enter a 1000 for <code>WMaxLimPct</code> to set the power to 100% (full output). Check to see if there was anything reported on the Kali machine. </li>
+</ul>
+<p>You should see that the filter detected this data and modified the 1000 to 200 (20%).  If you perform a <code>Read</code> at the bottom of the SVP, you will see that the actual value in the DER Modbus server is 200! Someone has changed the Modbus data in flight between the DERMS and the DER. At this point, the <code>WMaxLimPct</code> value can never be set back to 100%!</p>
+<p>Press <code>q</code> on the ettercap session to exit. </p>
+<p><img alt="ifconfig" src="../img/MITM.PNG" /></p>
+</li>
+</ol>
+<h1 id="lessons_learned">Lessons Learned<a class="headerlink" href="#lessons_learned" title="Permanent link">&para;</a></h1>
+<p>This session showed how to use ettercap to conduct ARP spoofing and sniff traffic between the DERMS and DER.  Modbus packets were modifed and replayed to the DER to change the active power of the equipment. Next a ettercap filter was compiled and applied to modify the Modbus traffic in real time by intercepting this data and replaying it to the DER device. </p>
+<p>In this example, only the traffic to the DER device was modified.  Commands issued by the DERMS were modified between the DERMS and DER device.  Even more nefarious is a MITM attack that modifies traffic returning to the DERMS to make it appear as though the commands were accepted by the DER device. This tactic was used in the Stuxnet computer worm that damaged Iranian nuclear centrifuges wherein the MITM code faked industrial process control sensor signals. Could you imagine how the filter could be modified to create such a behavior?</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="over_lab7.html" class="btn btn-neutral float-left" title="Overview, Goals, Prerequisites"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../lab-8/over_lab8.html" class="btn btn-neutral float-right" title="Overview, Goals, Prerequisites">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>2022 National Technology and Engineering Solutions of Sandia, LLC</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="over_lab7.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../lab-8/over_lab8.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

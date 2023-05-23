@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Malicious Firmware - CyberStrike Lab Workbook</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Malicious Firmware";
+        var mkdocs_page_input_path = "lab-4\\malicious_update.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../index.html" class="icon icon-home"> CyberStrike Lab Workbook
+        </a>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Overview</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../overview/labs_over.html">Laboratory Background Info</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 1 - Exploiting DER Interfaces</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-2/over_lab2.html">Overview, Goals, Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-2/recon_nmap2.html">Reconnaissance with Nmap</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-2/brute_force_ssh2.html">Brute Forcing SSH Passwords</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 2 - DOS Attacks</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-3/over_lab4.html">Overview, Goals, Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-3/dos.html">Denial of Service (DOS)</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 3 - Firmware Analysis</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="over_lab3b.html">Overview, Goals, and Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="der_firmware.html">Investigating DER Firmware</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 4 - Firmware Cryptography</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="over_lab3.html">Overview, Goals, and Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Exercises</a>
+    <ul class="current">
+                <li class="toctree-l2 current"><a class="reference internal current" href="malicious_update.html">Malicious Firmware</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#firmware_update_process">Firmware Update Process</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#updating_der_firmware">Updating DER Firmware</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#takeaways">Takeaways</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="encrypt_decrypt_data3.html">Encrypting/Decrypting Data (optional)</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 5 - Web Exploitation</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-5/over_lab5.html">Overview, Goals, Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-5/web_exploit.html">Website Exploits</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-5/control_der_vnc5.html">Controlling the DER through VNC</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 6 - Vulnerable API and App Security</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-6/over_lab6.html">Overview, Goals, Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-6/interacting_api.html">Vulnerable API</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-6/app_inspect.html">Smart Phone App Inspection</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 7 - Replay and MITM Attacks</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-7/over_lab7.html">Overview, Goals, Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-7/replay-mitm.html">Replay and MITM</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 8 - Security Improvements</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-8/over_lab8.html">Overview, Goals, Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-8/20305firewalls.html">IEEE 2030.5 and FWs</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../about.html">About</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">CyberStrike Lab Workbook</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html" class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Lab 4 - Firmware Cryptography &raquo;</li>
+          <li>Exercises &raquo;</li>
+      <li>Malicious Firmware</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="securely_or_insecurely_updating_device_firmware">Securely or Insecurely Updating Device Firmware<a class="headerlink" href="#securely_or_insecurely_updating_device_firmware" title="Permanent link">&para;</a></h1>
+<p>In the prior lab we found that DER firmware is often not encrypted.  The firmware is also rarely digitally signed for authenticity.  We are now going to create encrypted firmware images with digital signatures to perform a firmware update on the DER device to show how this could be done.  The details of this process will be transparent to you, but if you are interested in how it works, you can review the following section.  The next lab will demonstrate the components that are used with this DER device. </p>
+<h3 id="firmware_update_process">Firmware Update Process<a class="headerlink" href="#firmware_update_process" title="Permanent link">&para;</a></h3>
+<p>The DER equipment has been designed to accept a very specific file format that can be decrypted and validated in the field with pre-installed keys.</p>
+<p>Unfortunately, asymmetric encryption is not appropriate for encrypting large data files like firmware packages.  Therefore vendors often use asymmetric keys to encrypt a symmetric key that can then be used to decrypt the data package. With this in mind, the final firmware update mechanism uses the following sequences: </p>
+<ul>
+<li>
+<p>At the DER vendor:</p>
+<ol>
+<li>Create, test, and validate the firmware data. </li>
+<li>Create digital signature using vendor <code>private signing key</code>. </li>
+<li>Compress the firmware data and the digital signature in a single file. </li>
+<li>Generate random <code>symmetric encryption key</code> and encrypt compressed file. </li>
+<li>Encrypt the symmetric key with the <code>public encyption key</code> of the DER.</li>
+<li>Compress the encrypted file and the encrypted key to create a final firmware file. </li>
+</ol>
+</li>
+<li>
+<p>The DER equipment will reverse this process:</p>
+<ol>
+<li>Decompress the file to get the encrypted symmetric key and encypted firmware file.</li>
+<li>Decrypt the symmetric key using the <code>private encryption key</code> that is preinstalled on the DER.</li>
+<li>Use the <code>symmetric encryption key</code> to decrypt the compressed file with firmware and signature. </li>
+<li>Decompress the file and compare the signature digest using the <code>public signing key</code> with the hash of the firmware file. </li>
+<li>If the signature verification passes, the software has not been corrupted/modified and can be installed. </li>
+</ol>
+</li>
+</ul>
+<p>The keys and firmware file format are represented below: </p>
+<p><img alt="" src="../img/DER_Firmware_Update.PNG" /></p>
+<h3 id="updating_der_firmware">Updating DER Firmware<a class="headerlink" href="#updating_der_firmware" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>On the Kali Machine, there are keys that can be used to sign and encrypt firmware for the DER.  First navigate to the <code>firmware_update</code> directory and look at the contents.  </p>
+<p><code>cd ~/firmware_update</code></p>
+<p><code>ls</code></p>
+<p>You will notice there is a <code>encryption-public-key.pem</code> and a <code>signing-private-key.pem</code>.</p>
+</li>
+<li>
+<p>Look at the python package that we want to send to the DER. This will be executed when we upload it. </p>
+<p><code>cat v0.1/__main__.py</code></p>
+<p>It is a python code that uploads solar tracker firmware to the Arduino UNO to have the tracker follow a light source using the photodiodes. Then the code prints the version number, <code>v0.1.0</code>, to the website. </p>
+</li>
+<li>
+<p>Sign the firmware using the <code>sign_and_encrypt.sh</code> bash script.  Feel free to look at the details of the code if you are interested. </p>
+<p><code>./sign_and_encrypt.sh v0.1 signing-private-key.pem encryption-public-key.pem</code></p>
+<p><img alt="" src="../img/DERFirmwareUpdate.PNG" /></p>
+<p>If you look in this compressed tar file you will find the asymetrically-encrypted symmetric password (<code>password.enc</code>) and the encrypted, compressed file (<code>firmware.zip.enc</code>) containing the firmware file and a base 64 encoded digital signature file: </p>
+<p><img alt="" src="../img/FirmwarePayload.PNG" /></p>
+</li>
+<li>
+<p>In the firefox browser on the Kali machine, navigate to the firmware upload page at <code>http://10.10.0.100/firmware/update</code></p>
+</li>
+<li>
+<p>Click the <code>Browse</code> button and select the <code>kali/firmware_update/firmware-v0.1.tar</code> file. Click <code>Upload</code>. You should be presented with the following screen. </p>
+<p><img alt="" src="../img/DERFirmwareUpdated.PNG" /></p>
+</li>
+<li>
+<p>The DER validated the firmware update using the <code>encryption-private-key.pem</code> and <code>signing-public-key.pem</code> files that are on the DER device. Use your smart phone or some other light source to test the tracker.  The solar tracker should follow the light source. </p>
+</li>
+<li>
+<p>But what would happen if there was an insider threat or someone else gained access to the DER manufacturer's signing keys?  Could they write malicious code to cause the DER device to divulge private information or stop working.  Let's try this.  First look at the changes in Firmware <code>v0.2_evil</code> and then sign this code. </p>
+<p><code>cat v0.2_evil/__main__.py</code></p>
+<p>Here we're requesting the DER to no longer print the version number, but the contents of the working directory. </p>
+<p><code>./sign_and_encrypt.sh v0.2_evil signing-private-key.pem encryption-public-key.pem</code></p>
+<p><img alt="" src="../img/EvilFirmware.PNG" /></p>
+</li>
+<li>
+<p>Repeat the upload process, but select the <code>firmware-v0.2_evil.tar</code> file.  Now we can see the files that are running on the webserver!</p>
+<p><img alt="" src="../img/DumpWebserver.PNG" /></p>
+</li>
+<li>
+<p>We see that this directory includes the <code>encryption-private-key.pem</code>.  We could also print this to the website for anyone to steal by modifying the code in the <code>__main__.py</code> file.  Sign the <code>v0.3_evil</code> code and upload it to see this key.</p>
+<p><code>./sign_and_encrypt.sh v0.3_evil signing-private-key.pem encryption-public-key.pem</code></p>
+<p><img alt="" src="../img/private_key_stolen.PNG" /></p>
+</li>
+<li>
+<p>Now, let's compromise the operations of the solar tracker by uploading code that will cause the tracker to <strong>avoid</strong> light sources. There is malicious code included in <code>v0.4_evil</code> that reverses the tracking logic. Sign the code and then upload it to the website. </p>
+<p><code>./sign_and_encrypt.sh v0.4_evil signing-private-key.pem encryption-public-key.pem</code></p>
+<p>You should see the website report the version <code>v0.1.0 Evil Tracker</code>. Use your smart phone or some other light source to see how the tracker operates now.  It should avoid the light source. </p>
+</li>
+<li>
+<p>Let's set the tracker firmware back to the good version.  Please upload the <code>kali/firmware_update/firmware-v0.1.tar</code> file once again. </p>
+</li>
+</ol>
+<h2 id="takeaways">Takeaways<a class="headerlink" href="#takeaways" title="Permanent link">&para;</a></h2>
+<p>Clearly, losing the signing keys or allowing access to the signing server is catastrophic.  With this access any malicious firmware can be uploaded to all the devices which could break or otherwise damage the DER equipment. For example, in the 2015 Ukraine attacks, the adversary uploaded malicious firmware to brick devices.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="over_lab3.html" class="btn btn-neutral float-left" title="Overview, Goals, and Prerequisites"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="encrypt_decrypt_data3.html" class="btn btn-neutral float-right" title="Encrypting/Decrypting Data (optional)">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>2022 National Technology and Engineering Solutions of Sandia, LLC</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="over_lab3.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="encrypt_decrypt_data3.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Install Python - CyberStrike Lab Workbook</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Install Python";
+        var mkdocs_page_input_path = "setup\\der_setup.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../index.html" class="icon icon-home"> CyberStrike Lab Workbook
+        </a>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Overview</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../overview/labs_over.html">Laboratory Background Info</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 1 - Exploiting DER Interfaces</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-2/over_lab2.html">Overview, Goals, Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-2/recon_nmap2.html">Reconnaissance with Nmap</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-2/brute_force_ssh2.html">Brute Forcing SSH Passwords</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 2 - DOS Attacks</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-3/over_lab4.html">Overview, Goals, Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-3/dos.html">Denial of Service (DOS)</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 3 - Firmware Analysis</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-4/over_lab3b.html">Overview, Goals, and Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-4/der_firmware.html">Investigating DER Firmware</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 4 - Firmware Cryptography</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-4/over_lab3.html">Overview, Goals, and Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-4/malicious_update.html">Malicious Firmware</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-4/encrypt_decrypt_data3.html">Encrypting/Decrypting Data (optional)</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 5 - Web Exploitation</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-5/over_lab5.html">Overview, Goals, Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-5/web_exploit.html">Website Exploits</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-5/control_der_vnc5.html">Controlling the DER through VNC</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 6 - Vulnerable API and App Security</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-6/over_lab6.html">Overview, Goals, Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-6/interacting_api.html">Vulnerable API</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-6/app_inspect.html">Smart Phone App Inspection</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 7 - Replay and MITM Attacks</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-7/over_lab7.html">Overview, Goals, Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-7/replay-mitm.html">Replay and MITM</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 8 - Security Improvements</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-8/over_lab8.html">Overview, Goals, Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-8/20305firewalls.html">IEEE 2030.5 and FWs</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../about.html">About</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">CyberStrike Lab Workbook</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html" class="icon icon-home" alt="Docs"></a> &raquo;</li>
+      <li>Install Python</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="install_python">Install Python<a class="headerlink" href="#install_python" title="Permanent link">&para;</a></h1>
+<h1 id="install_der_simulator">Install DER simulator<a class="headerlink" href="#install_der_simulator" title="Permanent link">&para;</a></h1>
+<ol>
+<li>
+<p>Install the der_simulator source code. </p>
+</li>
+<li>
+<p>Configure docker to point to the </p>
+</li>
+<li></li>
+</ol>
+<h1 id="add_users">Add Users<a class="headerlink" href="#add_users" title="Permanent link">&para;</a></h1>
+<ol>
+<li>
+<p>Create <code>deruser</code> account with password <code>secret</code></p>
+<p><code>sudo adduser deruser</code></p>
+</li>
+<li>
+<p>Create <code>deradmin</code> account with password <code>password1</code>. </p>
+<p><code>sudo adduser deradmin</code> </p>
+<p>Update the <code>deradmin</code> password to the following with <code>sudo nano /etc/shadow</code></p>
+<pre><code>deradmin:$6$VIAfkbqt58HrKuUp$knTnUiA4D1H.lNh2v0FnKdU32fRBtkcqXiMrw4lCAQmqgVgvznYFUhGJ.hjb4JZb.CTCGs98SVQMjjUMx5J8v1:19069:0:99999:7:::
+</code></pre>
+<p>Add <code>deradmin</code> to root/administrator group with:</p>
+<pre><code>`sudo usermod -aG root deradmin`
+`sudo usermod -aG administrator deradmin`
+`sudo usermod -aG sudo deradmin`
+`sudo groups deradmin`
+</code></pre>
+</li>
+</ol>
+<h1 id="create_vnc_interface">Create VNC interface<a class="headerlink" href="#create_vnc_interface" title="Permanent link">&para;</a></h1>
+<ol>
+<li>
+<p>Install TigerVNC: </p>
+<p><code>sudo apt install tigervnc-standalone-server tigervnc-common tigervnc-xorg-extension tigervnc-viewer</code></p>
+</li>
+<li>
+<p>Follow these <a href="https://www.cyberciti.biz/faq/install-and-configure-tigervnc-server-on-ubuntu-18-04/">instructions</a></p>
+</li>
+<li>
+<p>Create <code>vnc</code> user with <code>superman</code> password. </p>
+<pre><code>sudo adduser vnc
+sudo passwd vnc
+</code></pre>
+</li>
+<li>
+<p>Create VNC password with <code>vncpasswd</code> and set password to <code>superman</code>. Do not have a view only password. </p>
+</li>
+<li>
+<p>Allow remove VNC sessions: <code>vncserver -localhost no</code></p>
+</li>
+<li>
+<p>Start server <code>vncserver</code> and verify it's running <code>vncserver -list</code> and <code>ss -tulpn | egrep -i 'vnc|590'</code></p>
+</li>
+<li>
+<p>Update the firewall rules to allow tcp connections to ports 5900, 5901, 5902, and 5903. </p>
+<p><code>sudo ufw enable</code></p>
+<p><code>sudo ufw allow 5900/tcp</code></p>
+<p><code>sudo ufw allow 5901/tcp</code></p>
+<p><code>sudo ufw allow 5902/tcp</code></p>
+<p><code>sudo ufw allow 5903/tcp</code></p>
+<p><code>sudo ufw status</code></p>
+</li>
+<li></li>
+</ol>
+<h1 id="install_ssh_server">Install SSH server<a class="headerlink" href="#install_ssh_server" title="Permanent link">&para;</a></h1>
+<ol>
+<li>
+<p>Install the service an open the port through the firewall.  </p>
+<p><code>sudo apt install openssh-server</code></p>
+<p><code>sudo systemctl status ssh</code></p>
+<p><code>sudo ufw allow ssh</code></p>
+</li>
+<li>
+<p>Create a banner (for fun)</p>
+<p><code>sudo nano /etc/ssh/der_banner</code></p>
+<p>Enter the following: </p>
+<pre><code> __          __  _                           
+ \ \        / / | |                          
+  \ \  /\  / /__| | ___ ___  _ __ ___   ___  
+   \ \/  \/ / _ \ |/ __/ _ \| '_ ` _ \ / _ \ 
+    \  /\  /  __/ | (_| (_) | | | | | |  __/ 
+  _  \/  \/ \___|_|\___\___/|_| |_| |_|\___| 
+ | |        | | | |                          
+ | |_ ___   | |_| |__   ___                  
+ | __/ _ \  | __| '_ \ / _ \                 
+ | || (_) | | |_| | | |  __/                 
+  \__\___/   \__|_| |_|\___|                 
+  / ____|     | |                            
+ | (___   ___ | | __ _ _ __                  
+  \___ \ / _ \| |/ _` | '__|                 
+  ____) | (_) | | (_| | |                    
+ |_____/ \___/|_|\__,_|_|                    
+  _____    ______   _____    _               
+ |  __ \  |  ____| |  __ \  | |              
+ | |  | | | |__    | |__) | | |              
+ | |  | | |  __|   |  _  /  | |              
+ | |__| | | |____  | | \ \  |_|              
+ |_____/  |______| |_|  \_\ (_)
+</code></pre>
+<p><code>sudo nano /etc/ssh/der_banner</code></p>
+<p>Add <code>sudo nano /etc/ssh/der_banner</code></p>
+</li>
+<li>
+<p>Restart SSH service</p>
+<p><code>sudo systemctl reload ssh.service</code></p>
+</li>
+</ol>
+<h1 id="install_the_code_signing_key">Install the code signing key<a class="headerlink" href="#install_the_code_signing_key" title="Permanent link">&para;</a></h1>
+<ol>
+<li>
+<p>Generate keypair in <code>~/solarflask/solarflask</code>: </p>
+<p><code>openssl genrsa -out private-key-der.pem</code></p>
+<p><code>openssl rsa -in private-key-der.pem -pubout -out solarflask_pub.key.pem</code></p>
+</li>
+<li>
+<p>Copy private key over to Kali: </p>
+<p>On Kali: <code>sudo service ssh start</code></p>
+<p>On DER: <code>scp private-key-der.pem kali@10.10.0.10:~/</code></p>
+</li>
+<li>
+<p>Move the private key on Kali into <code>~/code_signing_key/</code>. </p>
+</li>
+</ol>
+<h1 id="helpful_debugging_commands">Helpful debugging commands:<a class="headerlink" href="#helpful_debugging_commands" title="Permanent link">&para;</a></h1>
+<ul>
+<li>DER current operations: <code>docker-compose logs --follow</code></li>
+<li>DER startup: <code>docker-compose logs | grep -v 'sensor' | grep -v influx | head -n 20</code></li>
+<li>Configure IP manually: <code>sudo ip link set dev ens33 up</code>, <code>sudo ip addr add 10.10.0.100/24 dev ens33</code></li>
+<li></li>
+</ul>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>2022 National Technology and Engineering Solutions of Sandia, LLC</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

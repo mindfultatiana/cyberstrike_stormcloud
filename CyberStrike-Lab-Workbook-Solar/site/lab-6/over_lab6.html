@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Overview, Goals, Prerequisites - CyberStrike Lab Workbook</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Overview, Goals, Prerequisites";
+        var mkdocs_page_input_path = "lab-6\\over_lab6.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../index.html" class="icon icon-home"> CyberStrike Lab Workbook
+        </a>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Overview</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../overview/labs_over.html">Laboratory Background Info</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 1 - Exploiting DER Interfaces</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-2/over_lab2.html">Overview, Goals, Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-2/recon_nmap2.html">Reconnaissance with Nmap</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-2/brute_force_ssh2.html">Brute Forcing SSH Passwords</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 2 - DOS Attacks</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-3/over_lab4.html">Overview, Goals, Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-3/dos.html">Denial of Service (DOS)</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 3 - Firmware Analysis</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-4/over_lab3b.html">Overview, Goals, and Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-4/der_firmware.html">Investigating DER Firmware</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 4 - Firmware Cryptography</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-4/over_lab3.html">Overview, Goals, and Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-4/malicious_update.html">Malicious Firmware</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-4/encrypt_decrypt_data3.html">Encrypting/Decrypting Data (optional)</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 5 - Web Exploitation</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-5/over_lab5.html">Overview, Goals, Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-5/web_exploit.html">Website Exploits</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-5/control_der_vnc5.html">Controlling the DER through VNC</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 6 - Vulnerable API and App Security</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="over_lab6.html">Overview, Goals, Prerequisites</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#part_a_-_apis">Part A - APIs</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#api">API</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#restful_api">RESTful API</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#part_b_-_smart_phone_apps">Part B - Smart Phone Apps</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#goal">Goal</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#prerequisites">Prerequisites</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#tools">Tools</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="interacting_api.html">Vulnerable API</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="app_inspect.html">Smart Phone App Inspection</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 7 - Replay and MITM Attacks</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-7/over_lab7.html">Overview, Goals, Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-7/replay-mitm.html">Replay and MITM</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 8 - Security Improvements</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-8/over_lab8.html">Overview, Goals, Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-8/20305firewalls.html">IEEE 2030.5 and FWs</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../about.html">About</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">CyberStrike Lab Workbook</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html" class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Lab 6 - Vulnerable API and App Security &raquo;</li>
+      <li>Overview, Goals, Prerequisites</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="vulnerable_application_programming_interfaces_apis_and_smart_phone_app_analysis">Vulnerable Application Programming Interfaces (APIs) and Smart Phone App Analysis<a class="headerlink" href="#vulnerable_application_programming_interfaces_apis_and_smart_phone_app_analysis" title="Permanent link">&para;</a></h1>
+<h2 id="part_a_-_apis">Part A - APIs<a class="headerlink" href="#part_a_-_apis" title="Permanent link">&para;</a></h2>
+<p>In this lab, you will have the opportunity to familiarize yourselves with a simulated DER vendor's RESTful (Representational State Transfer) API (Application Programming Interface). The lab will provide a hands-on experience where you and learn about the various features and functionalities of the API, while also being able to practice interacting with the API, making HTTP (Hypertext Transfer Protocol) requests, and receiving responses from the DERMS Server. Authentication using JWT (JSON Web Tokens) will be also included to demonstrate how to secure the DER API. Additionally, the lab will cover testing potential vulnerabilities of the API using OWASP (Open Web Application Security Project) ZAP (Zed Attack Proxy). </p>
+<h4 id="api">API<a class="headerlink" href="#api" title="Permanent link">&para;</a></h4>
+<p>An API is a set of protocols, routines, and tools for building software applications. It defines how different software components should interact with each other, providing a standard interface for communication. In simpler terms, an API allows different software systems to talk to each other and exchange information or functionality without requiring the developer or the end-user to know the underlying details of how the other system works. APIs can be very useful in a DER ecosystem as a “Middleware”, where a PV Inverter owner may want to login or where a Solar Company administrator may need to retrieve customer information from the DERMS server, for example. </p>
+<h4 id="restful_api">RESTful API<a class="headerlink" href="#restful_api" title="Permanent link">&para;</a></h4>
+<p>Representational State Transfer APIs are a type of web API that follow a set of architectural principles and constraints that make them simple, lightweight, and scalable. RESTful APIs are based on the HTTP (Hypertext Transfer Protocol) standard, which is the protocol used for transmitting over the web. They operate on resources, which can be any type of data or object that can be represented in a digital format. Each resource is identified by a unique URL (Uniform Resource Locator), and clients can use HTTP methods such as GET, POST, PUT, and DELETE to interact with those resources.</p>
+<ul>
+<li>GET: Reading/Retrieving data from the server</li>
+<li>PUT: Update existing resources with new data in the server</li>
+<li>POST: Submit new data to a server</li>
+<li>DELETE: Delete an existing resource from the server</li>
+</ul>
+<p>One of the key principles of RESTful APIs is that they are stateless, meaning that each request contains all of the information necessary for the server to respond to it. This allows RESTful APIs to be easily scalable and distributed, as they do not rely on server-side sessions or stateful mechanisms.</p>
+<h2 id="part_b_-_smart_phone_apps">Part B - Smart Phone Apps<a class="headerlink" href="#part_b_-_smart_phone_apps" title="Permanent link">&para;</a></h2>
+<p>Many distributed energy resources are now accessed and updated from smart phone applications. These apps link the manufacturer to the fielded equipment. Android apps are installed from the Google Play Store, other App stores, or via the ADB or SD Card. Apps are organized based on categories (e.g., Communications, Social Networking, Business/ Productivity, and so on). Once an app is installed on an Android device:</p>
+<ul>
+<li>App APK is stored in the <code>USERDATA</code> partition in a subfolder of the <code>/app</code> folder</li>
+<li>App Data is stored in the <code>USERDATA</code> partition in a subfolder of the <code>/data</code> folder (app Sandbox)</li>
+</ul>
+<p>The App Data folder uses the package name (e.g., <code>com.whatsapp</code>, <code>com.facebook.katana</code>, or <code>org.telegram.messenger</code>). Once installed, an app can request permissions to read and write data in the <code>/media</code> folder in the USERDATA partition. An example of Gmail paths from the “Android Third-Party Apps Forensics Reference Guide” ©2021 Mattia Epifani.</p>
+<p><img alt="Gmail File Types" src="../img/lab4-gmail.png" /></p>
+<p>Why this matters is that mobile apps can include hard-coded secrets like administrator passwords, cryptographic keys, account credentials, or internet-connected API endpoints. Finding this secret information would allow an attacker to compromise the DER or EV Charger.</p>
+<p>On Android phones, Android App (APK) software contrains the application. iOS apps are run on Apple phones. We can download and inspect these app files as will be shown in this lab. </p>
+<h2 id="goal">Goal<a class="headerlink" href="#goal" title="Permanent link">&para;</a></h2>
+<p>The goal of this lab is to demonstrate the core architecture of a web application and more specifically focus on the RESTful API aspect of it. By the end of it, students will have a good understanding of how to interact with an API through Postman, i.e., perform JWT authentication and make HTTP requests. Additionally, students will have gained valuable knowledge in how to perform security testing of the APIs using industry-standard tools such as OWASP ZAP.   </p>
+<p>The lab shows the type of information at is contained in smart phone applications and why this could matter from an OSINT perspective.  The lab demonstrates the need to secure these apps. </p>
+<p><strong>NOTE</strong>: This lab uses actual vendor APK files.  If you do discover a vulnerability, please report this using responsible disclosure policies. </p>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>DERMS Windows VM:  </p>
+<ul>
+<li>python3</li>
+<li>pip3</li>
+<li>flask (python library)</li>
+<li>flask_cors (python library)</li>
+<li>Pyjwt (python library)</li>
+<li>requests (python library)</li>
+<li>Node.js (node v18.14.0)</li>
+<li>npm (npm v9.3.1)</li>
+<li>express (npm module)</li>
+</ul>
+</li>
+<li>
+<p>Kali Linux VM:</p>
+<ul>
+<li>PostMan</li>
+<li>OWASP ZAP</li>
+<li>Firmware files  </li>
+<li>JADX, an open-source Dex to Java decompiler  </li>
+</ul>
+</li>
+</ul>
+<h4 id="tools">Tools<a class="headerlink" href="#tools" title="Permanent link">&para;</a></h4>
+<p><strong>Postman</strong> - In this lab we will simulate the DER owner (i.e., the client) that will interact with the DER vendor's API using Postman. It provides an easy-to-use interface for sending HTTP requests to an API and inspecting the server’s response. We can create requests and specify parameters, headers, authentication, and other settings to test different scenarios and ensure that the DER Flask API works as expected. </p>
+<p><a href="https://www.postman.com/">PostMan</a></p>
+<p><strong>OWASP ZAP</strong> - OWASP ZAP is a free and open-source security testing tool used for finding vulnerabilities in web applications. It will be utilized in this lab to identify security vulnerabilities of the DER Vendor's API, such as injection flaws, cross-site scripting (XSS), broken authentication and session management, and other vulnerabilities. It supports a variety of security testing techniques, including passive scanning, active scanning, and fuzz testing, and can be integrated into the software development lifecycle (SDLC) to enable penetration testing as part of the development process. </p>
+<p><a href="https://owasp.org/www-project-zap/">OWASP ZAP</a></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../lab-5/control_der_vnc5.html" class="btn btn-neutral float-left" title="Controlling the DER through VNC"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="interacting_api.html" class="btn btn-neutral float-right" title="Vulnerable API">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>2022 National Technology and Engineering Solutions of Sandia, LLC</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../lab-5/control_der_vnc5.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="interacting_api.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
