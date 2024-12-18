@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Denial of Service (DOS) - CyberStrike Lab Workbook</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Denial of Service (DOS)";
+        var mkdocs_page_input_path = "lab-3\\dos.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../index.html" class="icon icon-home"> CyberStrike Lab Workbook
+        </a>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Overview</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../overview/labs_over.html">Laboratory Background Info</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 1 - Exploiting DER Interfaces</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-2/over_lab2.html">Overview, Goals, Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-2/recon_nmap2.html">Reconnaissance with Nmap</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-2/brute_force_ssh2.html">Brute Forcing SSH Passwords</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 2 - DOS Attacks</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="over_lab4.html">Overview, Goals, Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Exercises</a>
+    <ul class="current">
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Denial of Service (DOS)</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#lessons_learned">Lessons Learned</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 3 - Firmware Analysis</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-4/over_lab3b.html">Overview, Goals, and Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-4/der_firmware.html">Investigating DER Firmware</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 4 - Firmware Cryptography</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-4/over_lab3.html">Overview, Goals, and Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-4/malicious_update.html">Malicious Firmware</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-4/encrypt_decrypt_data3.html">Encrypting/Decrypting Data (optional)</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 5 - Web Exploitation</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-5/over_lab5.html">Overview, Goals, Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-5/web_exploit.html">Website Exploits</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-5/control_der_vnc5.html">Controlling the DER through VNC</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 6 - Vulnerable API and App Security</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-6/over_lab6.html">Overview, Goals, Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-6/interacting_api.html">Vulnerable API</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-6/app_inspect.html">Smart Phone App Inspection</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 7 - Replay and MITM Attacks</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-7/over_lab7.html">Overview, Goals, Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-7/replay-mitm.html">Replay and MITM</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 8 - Security Improvements</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-8/over_lab8.html">Overview, Goals, Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-8/20305firewalls.html">IEEE 2030.5 and FWs</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../about.html">About</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">CyberStrike Lab Workbook</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html" class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Lab 2 - DOS Attacks</li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">Denial of Service (DOS)</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="denial_of_service_dos">Denial of Service (DOS)<a class="headerlink" href="#denial_of_service_dos" title="Permanent link">&para;</a></h1>
+<ol>
+<li>
+<p>On the Windows DERMS machine open the SVP Dashboard on the Desktop. Once the application opens, click on the link to open <code>http://localhost:8444</code> in the Firefox browser. </p>
+<p><img alt="SVP Dashboard" src="../img/SVP.PNG" /></p>
+</li>
+<li>
+<p>In the browser, go to <code>Device</code> -&gt; <code>Open...</code> and enter the following:</p>
+<p><code>Device Type: Modbus TCP</code><br />
+<code>IP Address: 10.10.0.100</code><br />
+<code>IP Port: 502</code><br />
+<code>Slave ID: 1</code><br />
+<code>Timeout (secs): 5</code></p>
+<p>Click <code>Open</code>. </p>
+</li>
+<li>
+<p>Click through the SunSpec Modbus Models listed at the top: 1, 701, 702, etc.  The 700-series models were created to be complient to the IEEE 1547-2018 DER Interconnection Standards and includes a range of measurement and control features.  The SunSpec Model type is included at the top of the Modbus Register list. For instance, Model 701 is the DER AC Measurement model, <code>DERMeasureAC</code>.  If you click on the <code>Read</code> button at the bottom of the screen for this model you will see the live power data being updated in real time as this client reaches out to the Modbus Server running on the DER device.  </p>
+<p><img alt="SVP Dashboard Models" src="../img/SVP_DC.PNG" /></p>
+<p>The columns represent:
+* Modbus Register names and units
+* Raw Modbus values (that have not been scaled by the <code>_SF</code> registers)
+* Actual value after scaling (Blue)
+* Modbus Register (Green)
+* Hex values in the Register(s) </p>
+<p>Spend some time looking through the different Models and the functionality they represent. </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">IEEE Std 1547-2018 Interoperability Functionality</th>
+<th style="text-align: left;">SunSpec Modbus Information Model</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Nameplate Information</td>
+<td style="text-align: left;">DERCapacity (702), DERStorageCapacity (713)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Configuration Information</td>
+<td style="text-align: left;">DERCapacity (702)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Monitoring Information</td>
+<td style="text-align: left;">DERMeasurementAC (701)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Constant Power Factor</td>
+<td style="text-align: left;">DERCtlAC (704)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Voltage-Reactive Power</td>
+<td style="text-align: left;">DERVoltVar (705)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Active Power-Reactive Power</td>
+<td style="text-align: left;">DERWattVar (712)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Constant Reactive Power</td>
+<td style="text-align: left;">DERCtlAC (704)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Voltage-Active Power</td>
+<td style="text-align: left;">DERVoltWatt (706)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Voltage Trip</td>
+<td style="text-align: left;">DERTripLV (707), DERTripHV (708)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Momentary Cessation (optional)</td>
+<td style="text-align: left;">DERTripLV (707), DERTripHV (708)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Frequency Trip</td>
+<td style="text-align: left;">DERTripLF (709), DERTripHF (710)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Frequency Droop</td>
+<td style="text-align: left;">DERFreqDroop (711)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Enter Service</td>
+<td style="text-align: left;">DEREnterService (703)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Cease to Energize and Trip</td>
+<td style="text-align: left;">DEREnterService (703)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Limit Maximum Active Power</td>
+<td style="text-align: left;">DERCtlAC (704)</td>
+</tr>
+</tbody>
+</table>
+<p>SunSpec Modbus is one of three communication protocols required by IEEE Std. 1547-2018.  The other two options for vendors are IEEE 2030.5 and IEEE 1815 (DNP3).</p>
+</li>
+<li>
+<p>On the Windows machine, open another tab in the Firefox browser and go to <code>10.10.0.100</code>.</p>
+<p><img alt="Website" src="../img/der_sim_website.png" /></p>
+<p>You should see that the data is updating regularly. </p>
+</li>
+<li>
+<p>On the Kali VM, open a terminal.  We will be using <code>Hping3</code> to launch a DOS attack on the DER device.  Let's look at the manual for the tool with <code>man hping3</code>. </p>
+<p>Notice we can set the speed of packets with the <code>--fast</code>, <code>--faster</code>, and <code>--flood</code> options.  The protocol is indicated with <code>--icmp</code>, <code>--udp</code>, or <code>--rawip</code>; <code>-p</code> sets the destination port; <code>-V</code> sets verbose mode; <code>--data</code> sets the packet size; and <code>--syn</code> Sets the SYN tcp flag. </p>
+</li>
+<li>
+<p>We will flood the DER Modbus Server using the following command: </p>
+<div class="highlight"><pre><span></span><code>sudo hping3 --data 120 --syn -p 502 --flood -V 10.10.0.100
+</code></pre></div>
+</li>
+<li>
+<p>Return to the SVP Dashboard on the Windows machine and attempt to read Modbus registers. The SVP Dashboard should produce a timeout or other error because it is unable to reach the device. </p>
+<p><img alt="DOS Result" src="../img/dos.PNG" /></p>
+</li>
+<li>
+<p>Go back to the Kali machine and cancel the DOS attack with <code>Ctrl</code> + <code>c</code>.  Notice the number of packets that were sent during the attack. </p>
+<p><img alt="DOS Packet Count" src="../img/dos_cmd.PNG" /></p>
+</li>
+<li>
+<p>Return to SVP Dashboard on the Windows machine and click through the error messages.  Reconnect to the DER simulator via <code>Device</code> -&gt; <code>Open...</code>.  Attempt to read the Modbus holding registers again and see that the DER is working as expected once again. </p>
+</li>
+<li>
+<p>Now, let's attempt to DOS the DER webserver.  This service is running on port 80, so we'll change our attack on the Kali machine to the following. </p>
+<div class="highlight"><pre><span></span><code>sudo hping3 --data 120 --syn -p 80 --flood -V 10.10.0.100
+</code></pre></div>
+</li>
+<li>
+<p>From the Windows DERMS machine, attempt to interact with the DER website at <code>10.10.0.100</code>. It should be noticeably slower to respond.  If you watch and/or refresh the home screen, there may be some errors. </p>
+<p><img alt="DOS on web" src="../img/dos_on_web.PNG" /></p>
+<p>In the case of Distributed Denial of Service (DDOS) attacks 1000+ machines, often in a botnet, are pointed to a webserver or other service to take it offline.  As shown here a single attacker can significantly disrupt communications from a DER to a DERMS system.  More attacker systems sending traffic to DER systems will only worsen the response time of legitimate requests. </p>
+<p>Switch back to the Kali VM and cancel the attack with <code>ctrl</code> + <code>c</code>. </p>
+</li>
+<li>
+<p><strong>The following steps are optional if you have extra time.</strong> To get a sense of what the <code>hping3</code> program is doing to the servers. Let's start Wireshark on the Windows DERMS system.  Click on <code>Wireshark</code> on the Desktop to start the application.  Double click on the network interface that is recieving traffic, <code>Ethernet1</code>.  </p>
+<p>Refresh the website on <code>10.10.0.100</code>. Notice that you can now see all the inbound and outbound traffic in wireshark now.</p>
+<p><img alt="Wireshark" src="../img/wireshark_baseline.PNG" /></p>
+<p>In the above capture you can see there is the HTTP traffic from the DERMS to the DER website on port 80. If you Notice the number of displayed packets (e.g., <code>Displayed: 3174</code>) in the bottom of wireshark. </p>
+</li>
+<li>
+<p>Launch a new attack on the Kali VM against the Windows DERMS with the following: </p>
+<div class="highlight"><pre><span></span><code>sudo hping3 --data 120 --syn -p 80 --flood -V 10.10.0.50
+</code></pre></div>
+<p>After 5-10 seconds cancel the DOS attack with <code>Ctrl</code> + <code>c</code>.</p>
+</li>
+<li>
+<p>Return to Wireshark in the Windows machine and stop the capture with the red square icon.  Eliminate traffic from other machines by applying the following filter in Wireshark on the DERMS: <code>ip.addr == 10.10.0.50</code>. </p>
+<p><img alt="Wireshark" src="../img/wireshark_dos.PNG" /></p>
+<p>There are now 100,000+ more packets that have been sent to the Windows machine from the attacker.  Scrolling through the packets in Wireshark these appear black. </p>
+<p>Close Wireshark and select <code>Stop and Quit without Saving</code>. </p>
+</li>
+</ol>
+<h2 id="lessons_learned">Lessons Learned<a class="headerlink" href="#lessons_learned" title="Permanent link">&para;</a></h2>
+<p>This lesson showed how an attacker can flood a service with network traffic to prevent legitimate users from interacting with the service.  Good firewall policies can help prevent these types of attacks. Firewall rules will be introduced later in the course in Lab 8.</p>
+<p>LAB COMPLETE!</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="over_lab4.html" class="btn btn-neutral float-left" title="Overview, Goals, Prerequisites"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../lab-4/over_lab3b.html" class="btn btn-neutral float-right" title="Overview, Goals, and Prerequisites">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>2022 National Technology and Engineering Solutions of Sandia, LLC</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="over_lab4.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../lab-4/over_lab3b.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

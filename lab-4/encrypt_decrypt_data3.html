@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Encrypting/Decrypting Data (optional) - CyberStrike Lab Workbook</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Encrypting/Decrypting Data (optional)";
+        var mkdocs_page_input_path = "lab-4\\encrypt_decrypt_data3.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../index.html" class="icon icon-home"> CyberStrike Lab Workbook
+        </a>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Overview</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../overview/labs_over.html">Laboratory Background Info</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 1 - Exploiting DER Interfaces</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-2/over_lab2.html">Overview, Goals, Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-2/recon_nmap2.html">Reconnaissance with Nmap</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-2/brute_force_ssh2.html">Brute Forcing SSH Passwords</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 2 - DOS Attacks</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-3/over_lab4.html">Overview, Goals, Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-3/dos.html">Denial of Service (DOS)</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 3 - Firmware Analysis</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="over_lab3b.html">Overview, Goals, and Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="der_firmware.html">Investigating DER Firmware</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 4 - Firmware Cryptography</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="over_lab3.html">Overview, Goals, and Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Exercises</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="malicious_update.html">Malicious Firmware</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Encrypting/Decrypting Data (optional)</a>
+    <ul class="current">
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 5 - Web Exploitation</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-5/over_lab5.html">Overview, Goals, Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-5/web_exploit.html">Website Exploits</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-5/control_der_vnc5.html">Controlling the DER through VNC</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 6 - Vulnerable API and App Security</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-6/over_lab6.html">Overview, Goals, Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-6/interacting_api.html">Vulnerable API</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-6/app_inspect.html">Smart Phone App Inspection</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 7 - Replay and MITM Attacks</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-7/over_lab7.html">Overview, Goals, Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-7/replay-mitm.html">Replay and MITM</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 8 - Security Improvements</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-8/over_lab8.html">Overview, Goals, Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-8/20305firewalls.html">IEEE 2030.5 and FWs</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../about.html">About</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">CyberStrike Lab Workbook</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html" class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Lab 4 - Firmware Cryptography</li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">Encrypting/Decrypting Data (optional)</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h3 id="big_picture">Big Picture<a class="headerlink" href="#big_picture" title="Permanent link">&para;</a></h3>
+<p>This optional exercise discusses the elements used to encypt and sign the firmware update in the previous exercise.  To do this, we will be using 3 cryptographic operations:</p>
+<ol>
+<li>Symmetric encyption/decryption of a file using AES.</li>
+<li>Asymmetric encryption/decryption of a secret (e.g., a symmetric key/passphrase) using RSA.</li>
+<li>Digital signatures using asymmetric encryption to validate the authenticity of the firmware.</li>
+</ol>
+<h3 id="symmetric_encryptiondecryption_of_a_file">Symmetric Encryption/Decryption of a File<a class="headerlink" href="#symmetric_encryptiondecryption_of_a_file" title="Permanent link">&para;</a></h3>
+<p>Symmetric cryptography uses the same key (shared secret) for the encryption and decryption. In this case, we use a passphrase, <code>derpassword</code>, to encrypt and decrypt a file.</p>
+<p><em>Note</em> In order to make this lab easier, you may run all the commands below using a script <code>~/lab3_encrypt_decrypt</code> in the home directory of the Kali Linux machine by running: <code>./lab3_encrypt_decrypt</code> after opening a new terminal.</p>
+<ol>
+<li>
+<p>In the Kali VM, open a terminal window by clicking on the black <code>$_</code> icon on the favorites bar.</p>
+</li>
+<li>
+<p>Once you have a terminal up, enter the following commands to change to the <code>encryption</code> directory and verify you have <code>openssl</code>.</p>
+<p><code>cd encryption</code></p>
+<p><code>openssl version -a</code></p>
+</li>
+<li>
+<p>Create a plain text file that we want to encrypt:</p>
+<p><code>echo 'This is DER firmware code that needs to be uploaded' &gt; plain.txt</code></p>
+</li>
+<li>
+<p>Create the encrypted file using an Advanced Encryption Standard (AES) with a 256-bit key:</p>
+<p><code>echo "derpassword" | openssl aes-256-cbc -pbkdf2 -in plain.txt -out cipher.txt -pass stdin</code></p>
+<p>where:</p>
+<ul>
+<li><code>-aes-256-cbc</code> selects a 256-bit AES symmetric cipher</li>
+<li><code>-pbkdf2</code> uses the PBKDF2 (Password-Based Key Derivation Function 2) algorithm</li>
+<li><code>-in</code> is the file to encrypt</li>
+<li><code>-out</code> is the encrypted output file</li>
+<li><code>echo "derpassword"</code> and <code>-pass stdin</code> enter the <code>derpassword</code> for the user</li>
+<li>adding <code>-d</code> will decrypt the file</li>
+</ul>
+</li>
+<li>
+<p>Take a look at the encoded encoded file:</p>
+<p><code>cat cipher.txt</code></p>
+<p>Notice it is unreadable.</p>
+</li>
+<li>
+<p>Now let's decrypt the file and display the contents:</p>
+<p><code>echo "derpassword" | openssl aes-256-cbc -d -pbkdf2 -in cipher.txt -out decrypted.txt -pass stdin</code></p>
+<p><code>cat decrypted.txt</code></p>
+</li>
+</ol>
+<p><img alt="" src="../img/symm_enc_dec.PNG" /></p>
+<h3 id="asymmetric_encryption_and_decryption">Asymmetric Encryption and Decryption<a class="headerlink" href="#asymmetric_encryption_and_decryption" title="Permanent link">&para;</a></h3>
+<p>Asymmetric cryptography uses a public and private key pair to encrypt and decrypt data.  Typically, the public key of the recipient is used for encryption and the private key of the recipient is used for the decryption. The public key cannot be used to decrypt the data.</p>
+<p>Now let’s see how we can encrypt and decrypt a file. Providing this confidentiality requires the public key to encrypt the data and the private key decrypt the data.  For firmware updates, the DER will have the private key (possibly installed or generated during manufacture or commissioning) and the manufacturer will have a public key.</p>
+<ol>
+<li>
+<p>First generate a private key that will be on the DER.</p>
+<p><code>openssl genrsa -out private-key.pem</code></p>
+<p>Look at the private key: </p>
+<p><code>cat private-key.pem</code></p>
+</li>
+<li>
+<p>Generate corresponding public key and save this at the DER manufacturer.</p>
+<p><code>openssl rsa -in private-key.pem -pubout -out public-key.pem</code></p>
+<p>Look at the public key: <code>cat public-key.pem</code></p>
+<p><img alt="Public Private Keys" src="../img/lab3-pub-priv-keys.png" /></p>
+</li>
+<li>
+<p>Create a special message to encrypt.</p>
+<p><code>echo "I really hope no one except my DER can see this data..." &gt; data.txt</code></p>
+</li>
+<li>
+<p>Use the <strong>public key</strong> at the manufacturer to encrypt the message.  </p>
+<p><code>openssl rsautl -encrypt -pubin -inkey public-key.pem -keyform PEM -in data.txt &gt; encrypted_data.txt</code></p>
+</li>
+<li>
+<p>Look at the plain text and encrypted data (they don't match!):   </p>
+<p><code>cat data.txt &amp;&amp; echo "" &amp;&amp; cat encrypted_data.txt</code></p>
+</li>
+<li>
+<p>Use the <strong>private key</strong> to decrypt and display the data:   </p>
+<p><code>openssl rsautl -decrypt -inkey private-key.pem -keyform PEM -in encrypted_data.txt &gt; decrypted_data.txt &amp;&amp; cat decrypted_data.txt</code></p>
+<p>What do you know, it worked!</p>
+</li>
+</ol>
+<p><img alt="Asymmetric Encryption Results" src="../img/Asymm_Encryption.PNG" /></p>
+<h3 id="digitial_signatures">Digitial Signatures<a class="headerlink" href="#digitial_signatures" title="Permanent link">&para;</a></h3>
+<p>The code signing process uses asymmetric cryptography to verify the integrity of data and authenticity of the source. The process is shown in the figure below.</p>
+<p><img alt="" src="../img/CodeSigningProcess.PNG" /></p>
+<p>Let's walk through this process.</p>
+<ol>
+<li>
+<p>Generate a new public-private key pair.</p>
+<p><code>openssl genrsa -out der-private-key.pem</code></p>
+<p><code>openssl rsa -in der-private-key.pem -pubout -out der-public-key.pem</code></p>
+</li>
+<li>
+<p>Store the <strong>private key</strong> with the software development team. Place the <strong>public key</strong> on the DER to prove the update is legitimate.</p>
+</li>
+<li>
+<p>Create a self-signed certificate using the private key. (Note: a better practice is to have the certificate signed by and “chained to” a certificate authority, using a certificate signing request. This ensures the private key used for signing is associated with the company writing the code.)   </p>
+<p><code>openssl req -new -x509 -key private-key.pem -out cert.pem -days 360</code></p>
+<p>Press enter through all the information.</p>
+<p><img alt="" src="../img/DigitalSig1.PNG" /></p>
+</li>
+<li>
+<p>View the certificate.</p>
+<p><code>openssl x509 -in cert.pem -noout -text</code></p>
+<p><img alt="" src="../img/DigitalSig2.PNG" /></p>
+</li>
+<li>
+<p>Create a DER software update.</p>
+<p><code>echo "Super special data that runs my DER" &gt; firmware_payload.txt</code></p>
+</li>
+<li>
+<p>Create a binary digest and digital signature of the file.  This ties the <code>signature.sha256</code> file to the private key that exists with the software development team.</p>
+<p><code>openssl dgst -sha256 -sign private-key.pem -out signature.sha256 firmware\_payload.txt</code></p>
+</li>
+<li>
+<p>Convert digital signature to Base 64 to compress the data and make it easier to transfer.   </p>
+<p><code>openssl enc -base64 -in signature.sha256 -out signature.base64</code></p>
+<p><code>cat signature.base64</code></p>
+</li>
+<li>
+<p>At this point, the manufacturer would send/upload the firmware and signature to the DER.  The following actions would automatically happen on the DER equipment to validate the integrity and authenticity of the firmware update.</p>
+</li>
+<li>
+<p>Convert the signature from Base 64 back to binary.</p>
+<p><code>openssl enc -base64 -d -in signature.base64 -out der_signature.sha256</code></p>
+</li>
+<li>
+<p>Verify a digital signature using the OpenSSL <code>digest</code> function and the public key previously installed on the DER.  </p>
+<p><code>openssl dgst -sha256 -verify public-key.pem -signature der_signature.sha256 firmware_payload.txt</code></p>
+</li>
+<li>
+<p>Notice <code>Verified OK</code> result confirms the <code>firmware_payload.txt</code> file is from the manufacturer and has not been manipulated in transit.  This is done by taking the SHA256 hash of the <code>firmware_payload.txt</code> and comparing that to the hash in <code>der_signature.sha256</code>.</p>
+</li>
+<li>
+<p>Let’s prove someone cannot change the code.   </p>
+<p><code>echo "Super special data that runs a DER" &gt; malicious_firmware.txt</code></p>
+<p><code>openssl dgst -sha256 -verify public-key.pem -signature der_signature.sha256 malicious_firmware.txt</code></p>
+</li>
+<li>
+<p>Notice the result is Verification Failure.</p>
+<p><img alt="Signature Checks" src="../img/sign_checks.PNG" /></p>
+</li>
+</ol>
+<h3 id="more_on_encryption_optional">More On Encryption (Optional)<a class="headerlink" href="#more_on_encryption_optional" title="Permanent link">&para;</a></h3>
+<p>Extra Credit for Solar: It is worth noting that RSA is not the only asymmetric cryptosystem. IEEE 2030.5 uses the following cipher suite: <code>TLS_ECDHE_ECDSA_WITH_AES_128_CCM_8</code>. Breaking this down:</p>
+<ul>
+<li><strong>TLS</strong>: Transport Layer Security 1.2 is specified. TLS is the encryption used in web browsing for secure banking, credit card transactions, etc. Notably, the IEEE 2030.5 cipher suite complies with the RFC for TLS version 1.3.</li>
+<li><strong>ECDHE</strong>: The key exchange algorithm is Elliptic Curve Cryptography (ECC) with the P256 (also known as secp256r1 or prime256v1) curve using the Diffie-Hellman (DH) key agreement algorithm with Ephemeral (E) keys. The use of ephemeral keys provides for Perfect Forward Secrecy.</li>
+<li><strong>ECDSA</strong>: The signature algorithm is the Elliptic Curve Digital Signature Algorithm</li>
+<li><strong>AES_128</strong>: The bulk (symmetric) traffic encryption algorithm is the Advanced Encryption Standard (AES) using 128-bit keys. 128-bits complies with NSA Suite B requirements at the secret level. AES is run in Counter mode with Cipher Block Chaining (CBC).</li>
+<li><strong>CCM_8</strong>: Counter mode with CBC-MAC (CCM) is an Authenticated Encryption with Additional Data (AEAD) algorithm that combines encryption and authentication in one process, utilizing the final block of ciphertext as the Message Authentication Code (MAC)</li>
+</ul>
+<p>Additional information on firmware code signing and digital signatures is in:</p>
+<ul>
+<li>J. Johnson, I. Hanke, “Recommendations for Distributed Energy Resource Patching,” Sandia Report
+SAND2021-11150, September 2021.</li>
+</ul>
+<p>More information on DER cryptography is in:</p>
+<ul>
+<li>J. Obert, P. Cordeiro, J. Johnson, G. Lum, T. Tansy, M. Pala, R. Ih, “Recommendations for Trust and
+Encryption in DER Interoperability Standards,” Sandia Technical Report, SAND2019-1490, Feb 2019.</li>
+<li>C. Lai, N. Jacobs, S. Hossain-McKenzie, C. Carter, P. Cordeiro, I. Onunkwo, J. Johnson, "Cyber Security
+Primer for DER Vendors, Aggregators, and Grid Operators," Sandia Technical Report, SAND2017-13113,
+Dec 2017.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="malicious_update.html" class="btn btn-neutral float-left" title="Malicious Firmware"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../lab-5/over_lab5.html" class="btn btn-neutral float-right" title="Overview, Goals, Prerequisites">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>2022 National Technology and Engineering Solutions of Sandia, LLC</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="malicious_update.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../lab-5/over_lab5.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

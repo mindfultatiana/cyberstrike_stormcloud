@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Configure the Windows Machine - CyberStrike Lab Workbook</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Configure the Windows Machine";
+        var mkdocs_page_input_path = "setup\\windows_setup.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../index.html" class="icon icon-home"> CyberStrike Lab Workbook
+        </a>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Overview</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../overview/labs_over.html">Laboratory Background Info</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 1 - Exploiting DER Interfaces</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-2/over_lab2.html">Overview, Goals, Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-2/recon_nmap2.html">Reconnaissance with Nmap</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-2/brute_force_ssh2.html">Brute Forcing SSH Passwords</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 2 - DOS Attacks</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-3/over_lab4.html">Overview, Goals, Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-3/dos.html">Denial of Service (DOS)</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 3 - Firmware Analysis</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-4/over_lab3b.html">Overview, Goals, and Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-4/der_firmware.html">Investigating DER Firmware</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 4 - Firmware Cryptography</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-4/over_lab3.html">Overview, Goals, and Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-4/malicious_update.html">Malicious Firmware</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-4/encrypt_decrypt_data3.html">Encrypting/Decrypting Data (optional)</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 5 - Web Exploitation</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-5/over_lab5.html">Overview, Goals, Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-5/web_exploit.html">Website Exploits</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-5/control_der_vnc5.html">Controlling the DER through VNC</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 6 - Vulnerable API and App Security</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-6/over_lab6.html">Overview, Goals, Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-6/interacting_api.html">Vulnerable API</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-6/app_inspect.html">Smart Phone App Inspection</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 7 - Replay and MITM Attacks</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-7/over_lab7.html">Overview, Goals, Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-7/replay-mitm.html">Replay and MITM</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 8 - Security Improvements</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-8/over_lab8.html">Overview, Goals, Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-8/20305firewalls.html">IEEE 2030.5 and FWs</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../about.html">About</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">CyberStrike Lab Workbook</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html" class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Configure the Windows Machine</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="configure_the_windows_machine">Configure the Windows Machine<a class="headerlink" href="#configure_the_windows_machine" title="Permanent link">&para;</a></h1>
+<h3 id="install_the_ieee_20305_server">Install the IEEE 2030.5 Server<a class="headerlink" href="#install_the_ieee_20305_server" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Move the SunSpec IEEE 2030.5 server to the VM into <code>C:\Copyrighted_Server\DoNotCopyOrStealPlease\</code></p>
+</li>
+<li>
+<p>Install <a href="https://www.python.org/ftp/python/3.9.2/python-3.9.2rc1-amd64.exe">Python 3.9</a></p>
+</li>
+<li>
+<p>(Optional) Add <code>C:\Users\Admin\AppData\Local\Programs\Python\Python39\</code> to the PATH variable. </p>
+</li>
+<li>
+<p>Create a <code>run_2030.5_server.bat</code> with the following <code>cd C:\Copyrighted_Server\DoNotCopyOrStealPlease\2030_server &amp;&amp; C:\Users\Admin\AppData\Local\Programs\Python\Python39\python.exe C:\Copyrighted_Server\DoNotCopyOrStealPlease\2030_server\server.py</code></p>
+</li>
+<li>
+<p>Confirm when you run the <code>.bat</code> file it opens the port: </p>
+<div class="highlight"><pre><span></span><code>┌──(kali㉿kali)-[~]
+└─$ nmap 10.10.0.50 -p 9443
+Starting Nmap 7.92 ( https://nmap.org ) at 2022-10-17 18:18 EDT
+Nmap scan report for 10.10.0.50
+Host is up (0.0017s latency).
+
+PORT     STATE SERVICE
+9443/tcp open  tungsten-https
+
+Nmap done: 1 IP address (1 host up) scanned in 13.09 seconds
+</code></pre></div>
+</li>
+</ol>
+<h4 id="flask_api">Flask API<a class="headerlink" href="#flask_api" title="Permanent link">&para;</a></h4>
+<p>This lab will use Flask API, which is a Python library that allows developers to easily build RESTful APIs using the Flask web framework. It is a lightweight and flexible web framework that provides a minimalistic set of tools for web development, supporting common data formats such as JSON (JavaScript Object Notation) and it can be used with a variety of HTTP (Hypertext Transfer Protocol) clients. </p>
+<p><a href="https://flask.palletsprojects.com/en/2.2.x/">Flask</a></p>
+<h4 id="nodejs">Node.js<a class="headerlink" href="#nodejs" title="Permanent link">&para;</a></h4>
+<p>In this lab we utilize Node.js in order to store the PV data in the DERMS Windows VM. Specifically, it is a server-side runtime environment that allows developers to build scalable, high-performance applications by using an event-driven, non-blocking I/O model that makes it lightweight and efficient. Node.js is built on top of the V8 JavaScript engine from Google, which compiles JavaScript code into machine code at runtime. This allows Node.js to execute JavaScript code on the server, rather than just in the browser. </p>
+<p><a href="https://nodejs.org/en/">Node.js</a></p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>2022 National Technology and Engineering Solutions of Sandia, LLC</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

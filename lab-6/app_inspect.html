@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Smart Phone App Inspection - CyberStrike Lab Workbook</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Smart Phone App Inspection";
+        var mkdocs_page_input_path = "lab-6\\app_inspect.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../index.html" class="icon icon-home"> CyberStrike Lab Workbook
+        </a>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Overview</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../overview/labs_over.html">Laboratory Background Info</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 1 - Exploiting DER Interfaces</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-2/over_lab2.html">Overview, Goals, Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-2/recon_nmap2.html">Reconnaissance with Nmap</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-2/brute_force_ssh2.html">Brute Forcing SSH Passwords</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 2 - DOS Attacks</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-3/over_lab4.html">Overview, Goals, Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-3/dos.html">Denial of Service (DOS)</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 3 - Firmware Analysis</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-4/over_lab3b.html">Overview, Goals, and Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-4/der_firmware.html">Investigating DER Firmware</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 4 - Firmware Cryptography</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-4/over_lab3.html">Overview, Goals, and Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-4/malicious_update.html">Malicious Firmware</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-4/encrypt_decrypt_data3.html">Encrypting/Decrypting Data (optional)</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 5 - Web Exploitation</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-5/over_lab5.html">Overview, Goals, Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-5/web_exploit.html">Website Exploits</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-5/control_der_vnc5.html">Controlling the DER through VNC</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 6 - Vulnerable API and App Security</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="over_lab6.html">Overview, Goals, Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Exercises</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="interacting_api.html">Vulnerable API</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Smart Phone App Inspection</a>
+    <ul class="current">
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 7 - Replay and MITM Attacks</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-7/over_lab7.html">Overview, Goals, Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-7/replay-mitm.html">Replay and MITM</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 8 - Security Improvements</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-8/over_lab8.html">Overview, Goals, Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-8/20305firewalls.html">IEEE 2030.5 and FWs</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../about.html">About</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">CyberStrike Lab Workbook</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html" class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Lab 6 - Vulnerable API and App Security</li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">Smart Phone App Inspection</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h2 id="tesla_app_inspection">Tesla App Inspection<a class="headerlink" href="#tesla_app_inspection" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>Let’s look at the ChargePoint APK. An .apk file is really a zipped file. We can unzip this data:</p>
+<p><code>cd ~/firmware-images/Solar_Tesla_APK/</code> (go to Tesla app directory)</p>
+<p><code>file com.teslamotors.tesla_4.6.0-885-885.apk</code> (determine file type)</p>
+<p><code>unzip com.teslamotors.tesla_4.6.0-885-885.apk</code> (decompress the file)</p>
+<p><code>ls</code> (list directory contents)</p>
+<p><img alt="" src="../img/tesla_app.PNG" /></p>
+</li>
+<li>
+<p>Let’s search for Tesla email addresses:</p>
+<p><code>grep -r "tesla\.com"</code> </p>
+<p><code>cat res/raw/node_modules_tesla_paymentreactnative_package.json</code></p>
+<p><img alt="" src="../img/tesla_carl.PNG" /></p>
+<p>The risk of including names and email addresses in apps is that these people may be targeted for spearphishing or other campaigns.  Carl could also be targetted by competitors for industrial sabatoge or talent poaching.  </p>
+<p><code>grep -r "teslamotors\.com"</code></p>
+<p>This seems to show payment API endpoints that could be targetted by adversaries. </p>
+</li>
+<li>
+<p>Looking at that JSON file more closely, we can see the software versions being used by the app. If there are known vulnerabilities for this software, this would be useful data for the attackers.</p>
+<p><code>cat res/raw/node_modules_tesla_paymentreactnative_package.json</code></p>
+<p><img alt="" src="../img/tesla_payment_dependencies.PNG" /></p>
+</li>
+<li>
+<p>There don’t appear to be any passwords or certificates, but there is indications of solarcity and powerwall that lead to a file with API endpoints.</p>
+<p><code>grep -r -I "password"</code></p>
+<p><code>grep -r -i "certificate"</code></p>
+<p><code>grep -r -i "solarcity"</code></p>
+<p><code>grep -r -i "powerwall"</code></p>
+<p><code>head -n 200 assets/shared/ownerapi_endpoints.json</code></p>
+<p>These API endpoints are mostly for Tesla vehicles, but there are a few for the Powerwall stationary energy storage systems: </p>
+<p><code>cat assets/shared/ownerapi_endpoints.json | grep -b5 -a5 powerwall</code></p>
+<p><img alt="" src="../img/tesla_pw_apis.png" /></p>
+</li>
+<li>
+<p>What open-source code from github is running on the app?</p>
+<p><code>grep -r -i "github"</code></p>
+<p>As an example, it looks like they use ez-vcard (https://github.com/mangstadt/ez-vcard) which is a vCard library written in Java. vCards or Virtual Contact Files are a file and data interchange format used in business cards, smartphone contacts, and other applications.  If it is found that this software includes a serious bug, it may be possible to compromise the smart phone or DER/EVSE device running this software. </p>
+</li>
+<li>
+<p>Some of the operational code is in three Dalvik EXecutable (DEX) files - a process virtual machine
+(VM) for the Android operating system.</p>
+<p><code>file *.dex</code></p>
+<p>Run the GUI version of JADX, an open-source Dex to Java decompiler, to convert Dalvik bytecode to java classes. </p>
+<p><code>../jadx/build/jadx/bin/jadx-gui</code></p>
+<p>Using the shift key, you can select all the <code>.dex</code> files. </p>
+<p><img alt="" src="../img/jadx_tesla.PNG" /></p>
+</li>
+<li>
+<p>We can see several things in these files. </p>
+<ul>
+<li><code>com.teslamotors.TeslaApp.MainActivity</code> establishes an Android App session with hooks to the operating system and user interface, i.e., using Software Mansion's <a href="https://docs.swmansion.com/react-native-gesture-handler/docs/">Gesture Handler</a>. </li>
+<li><code>com.auth0.android.jwt.JWTDeserializer.deserialize</code> likely shows the fields that Tesla is using for their JSON Web Token (JWT) used to interact with the server API. </li>
+<li><code>com.teslamotors.plugins.ble.TeslaCardEmulationService</code> is used to create a Bluetooth Low Energy (BLE) signal to emulate a Tesla Card. </li>
+<li><code>com.tesla.data.oapi</code> includes the code for the Owner API. </li>
+<li><code>f.b.c.a.a.a.a.c</code> include cryptographic functions for the application. </li>
+<li>Plus lots more. Dig around and see what you can find!</li>
+</ul>
+</li>
+</ol>
+<h1 id="lessons_learned">Lessons Learned<a class="headerlink" href="#lessons_learned" title="Permanent link">&para;</a></h1>
+<p>Smart phone apps include a plethera of useful data for adversaries.  Some of the data includes open-source code resources, API endpoints, hard-coded credentials or certificates, names and/or email addresses of software developers, etc.  As one example, cybersecurity researchers were able to bypass the JWT (JSON Web Token) authentication for some API endpoints on Hyundai vehicles to <a href="https://threadreaderapp.com/thread/1597695281881296897.html">control the locks, horn, headlights, and truck</a> of the vehicle by monitoring the traffic from a mobile app. When building these applications, all sensative data must be removed and the authentication mechanisms made bulletproof. </p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="interacting_api.html" class="btn btn-neutral float-left" title="Vulnerable API"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../lab-7/over_lab7.html" class="btn btn-neutral float-right" title="Overview, Goals, Prerequisites">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>2022 National Technology and Engineering Solutions of Sandia, LLC</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="interacting_api.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../lab-7/over_lab7.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

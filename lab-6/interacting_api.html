@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Vulnerable API - CyberStrike Lab Workbook</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Vulnerable API";
+        var mkdocs_page_input_path = "lab-6\\interacting_api.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../index.html" class="icon icon-home"> CyberStrike Lab Workbook
+        </a>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Overview</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../overview/labs_over.html">Laboratory Background Info</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 1 - Exploiting DER Interfaces</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-2/over_lab2.html">Overview, Goals, Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-2/recon_nmap2.html">Reconnaissance with Nmap</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-2/brute_force_ssh2.html">Brute Forcing SSH Passwords</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 2 - DOS Attacks</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-3/over_lab4.html">Overview, Goals, Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-3/dos.html">Denial of Service (DOS)</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 3 - Firmware Analysis</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-4/over_lab3b.html">Overview, Goals, and Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-4/der_firmware.html">Investigating DER Firmware</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 4 - Firmware Cryptography</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-4/over_lab3.html">Overview, Goals, and Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-4/malicious_update.html">Malicious Firmware</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-4/encrypt_decrypt_data3.html">Encrypting/Decrypting Data (optional)</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 5 - Web Exploitation</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-5/over_lab5.html">Overview, Goals, Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-5/web_exploit.html">Website Exploits</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-5/control_der_vnc5.html">Controlling the DER through VNC</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 6 - Vulnerable API and App Security</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="over_lab6.html">Overview, Goals, Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Exercises</a>
+    <ul class="current">
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Vulnerable API</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#scenario_architecture">Scenario &amp; Architecture</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#interacting_with_the_api">Interacting with the API</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#lessons_learned">Lessons Learned</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#owasp_zap">OWASP Zap</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#lessons_learned_1">Lessons Learned</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="app_inspect.html">Smart Phone App Inspection</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 7 - Replay and MITM Attacks</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-7/over_lab7.html">Overview, Goals, Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-7/replay-mitm.html">Replay and MITM</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 8 - Security Improvements</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-8/over_lab8.html">Overview, Goals, Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-8/20305firewalls.html">IEEE 2030.5 and FWs</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../about.html">About</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">CyberStrike Lab Workbook</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html" class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Lab 6 - Vulnerable API and App Security</li>
+          <li class="breadcrumb-item">Exercises</li>
+      <li class="breadcrumb-item active">Vulnerable API</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="background">Background<a class="headerlink" href="#background" title="Permanent link">&para;</a></h1>
+<p>Application Programming Interfaces (APIs) are widely used by organizations to control cars, EV chargers, DER equipment, and other machines.  The API websites use a set of standardized HTTP methods. These methods are things like:</p>
+<ul>
+<li><strong>POST</strong> - submits an entity to the specified resource</li>
+<li><strong>GET</strong> - request a representation of the specified resource</li>
+<li><strong>PUT</strong> - replaces all current representations of the target resource </li>
+<li><strong>PATCH</strong> - applies partial modifications to a resource</li>
+<li><strong>DELETE</strong> - deletes the specified resource</li>
+</ul>
+<p>Smart phone apps or field devices communicate with cloud API endpoints (resources) through these HTTP methods.  An example resource might be <code>http://dercompany.com/customers/customer_id/12345/power_production</code>. A GET request on this resource would return power production from customer 12345's DER device.  This is one way that apps can display live DER power levels.  Unfortunately, there have been several authentication and authorization vulnerabilities discovered with APIs that allow adversaries to access data or control equipment they do not own.  We will explore these issues in this lab.  In the next exercise, we will find API endpoints in DER smart phone apps. </p>
+<h2 id="scenario_architecture">Scenario &amp; Architecture<a class="headerlink" href="#scenario_architecture" title="Permanent link">&para;</a></h2>
+<p>You are an attacker (i.e., a Client/Postman on the Kali Linux VM) who needs to access the DER Vendor’s information in the Windows VM through the DER Flask API. To do this, you must first be authenticated by the Server and once authenticated you can interact with the DER Flask API by performing various HTTP requests. Specifically, the requests that will be examined in this lab are the following:</p>
+<ol>
+<li>Login &amp; Retrieve the JWT token (POST request)</li>
+<li>Retrieve PV customer information (GET request)</li>
+<li>Retrieve PV inverter’s data (GET request)</li>
+<li>Get Firmware Update for a PV inverted (GET request)</li>
+<li>Get the GPS location of a PV inverter (GET request)</li>
+<li>Get the production data of a PV inverter (GET request)</li>
+<li>Add a new PV inverter to a PV plant (PUT request)</li>
+<li>Get the PV inverters that belong to a PV plant (GET request)</li>
+<li>Deactivate a PV inverter (PUT request)</li>
+<li>Get the status of a PV inverter (GET request)</li>
+</ol>
+<p><img alt="PV API Architecture" src="../img/new_architecture.png" /></p>
+<p>Finally, to identify potential cybersecurity vulnerabilities of the DER Flask API you will also utilize OWASP (Open Web Application Security Project) ZAP (Zed Attack Proxy) for automated penetration testing in the Kali Linux VM. </p>
+<p>Note: This API was designed to have similar behaviors as the <a href="https://developer.sma.de/sma-apis.html">SMA APIs</a>.</p>
+<h2 id="interacting_with_the_api">Interacting with the API<a class="headerlink" href="#interacting_with_the_api" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>On the Windows DERMS machine, open two Windows PowerShell from the taskbar. Right click the icon and select <code>Windows PowerShell</code> to start a 2nd instance.  In one, enter the following: </p>
+<p><code>node .\Documents\cyberstrike_api\pv_server.js</code></p>
+<p>In the other, enter the following:</p>
+<p><code>python .\Documents\cyberstrike_api\pv_api.py</code></p>
+<p>This will start the the Node.js Server which stores the PV Data and DER Flask API. The Node.js server listens on port 3000. The DER Flask API is listening to port 5000.</p>
+<p><img alt="Node.js Server" src="../img/node_start.PNG" /></p>
+</li>
+<li>
+<p>On the Kali Linux machine open a new terminal window and use the following command to start Postman:</p>
+<p><code>Postman</code></p>
+<p><img alt="Postman Application" src="../img/postman_open.PNG" /></p>
+</li>
+<li>
+<p>In the Postman application, there are a collection of preprogrammed POST, GET, and PUT requests in the left pane. </p>
+<p><img alt="Postman HTTP Requests" src="../img/postman_req_collections.PNG" />    </p>
+</li>
+<li>
+<p>When we click in the first POST request, i.e., <strong>Get JWT Token</strong> , we can see the URL of the request which is:</p>
+<p><code>http://10.10.0.50:5000/login</code></p>
+<p>When you click in the <strong>Headers</strong> tab you are able to see all the headers that are used to send this POST request. For example, you can see that we specify the <code>Content-Type</code> header to be <code>application/json</code> indicating that the request body format is JSON. Another example is the <code>Content</code> header which is specified as <code>keep-alive</code> maintaining a connection between the Postman client and the Node.js server, reducing the time needed to serve the HTTP requests.</p>
+<p>If you click in the <strong>Body</strong> tab you will be able to see the Request body of the Get JWT token request, which is actually defined as a JSON (remember the Content-Type header) and contains the username and password of the user who needs to be authenticated in the system.</p>
+<p><img alt="Postman HTTP Requests" src="../img/jwt_3.PNG" /></p>
+<p><img alt="Postman HTTP Requests" src="../img/jwt_4.PNG" /></p>
+</li>
+<li>
+<p>Click <strong>Send</strong> to send the POST request to the API for authentication. After the request is sent you can see in the Response Body the <code>JWT_token</code> which will be used as an authentication header to send successfully subsequent HTTP requests.</p>
+<p>The JWT can be decoded into human-readable content through several tools.  In this case, the payload is simply the id of the user, as shown below. </p>
+<p><img alt="Postman HTTP Requests" src="../img/jwt_5.PNG" /></p>
+<p><img alt="Postman HTTP Requests" src="../img/JWT_Decoded.PNG" /></p>
+</li>
+<li>
+<p>Now click the second GET request, ** Get Customer Information **. The URL of the request which is <code>http://10.10.0.50/customers</code>. Postman has been prepopulated with the JWT for most of the remaining requests. </p>
+<p>Click the <strong>Authorization</strong> tab and you will see the <em>Bearer Token</em> that was returned from the server. </p>
+<p>Click <strong>Send</strong>.  The GET request to the API will check the JWT token return all the customer information. </p>
+<p><img alt="Postman HTTP Requests" src="../img/customer_2.PNG" /></p>
+<p><img alt="Postman HTTP Requests" src="../img/customer_3.PNG" /></p>
+</li>
+<li>
+<p>Let's now check the third HTTP request, i.e., ** Get Customer Information - Fail **. This request is the same with the previous one, but without the JWT authorization token.</p>
+<p>Click <strong>Send</strong>. You will see a Response body from the Server: <code>{"Auth_Message": "Authorization header missing"}</code> and a 401 HTTP status code (UNAUTHORIZED)  </p>
+<p><img alt="Postman HTTP Requests" src="../img/customer_4.PNG" /></p>
+</li>
+<li>
+<p>Now let's issue the <strong>Get Device Data</strong> GET request. In the request body we can put a <em>deviceid</em> as a value for any PV inverters we want, e.g., <em>1</em>, <em>2</em>, or <em>3</em>.</p>
+<p>For the user to fetch the PV information, they must be authenticated with a JWT. Confirm the authorization header uses a <em>Bearer Token</em> with the JWT from the <em>Get JWT Token</em> request.</p>
+<p>Press <em>Send</em>.  The response from the server will include PV information such as the battery capacity, firmware version, and others.</p>
+<p><img alt="Postman HTTP Requests" src="../img/device_1.PNG" /></p>
+<p><img alt="Postman HTTP Requests" src="../img/device_2.PNG" /></p>
+<p><img alt="Postman HTTP Requests" src="../img/device_3.PNG" /></p>
+</li>
+<li>
+<p>Change the PV id to <em>2</em> in the <em>params</em> tab. Send the request and observe the response. You should be able to see the information of PV inverter with id 2.</p>
+</li>
+<li>
+<p>Now, let's try to see the information of PV Inverter ID 3.  We can see that the user with this specific JWT does ** NOT ** have access to see the information of this particular PV system, since we get a 401 UNAUTHORIZED error and a respective Auth_Message.  PV plant 25056 that includes PV Inverter IDs 1 and 2. It does ** NOT ** include PV Inverter ID 3.</p>
+<p><img alt="Postman HTTP Requests" src="../img/device_4.PNG" /></p>
+</li>
+<li>
+<p>Now let's send the <strong>Get Firmware Update Location</strong>. Based on the Inverter deviceid, the API informs the user of the firmware update file's URL, i.e., <code>`http://127.0.0.1/firmware_download_25056</code>.  </p>
+<p><img alt="Postman HTTP Requests" src="../img/firmware_1.PNG" /></p>
+</li>
+<li>
+<p>Next, send the HTTP GET <strong>Get GPS Location</strong> request, which returns the GPS location of the PV inverter. For deviceid=1, we can see that the returned coordinates for the first PV are <em>latitude=51.31555</em> and <em>longitude=9.4567</em>. </p>
+<p><img alt="Postman HTTP Requests" src="../img/gps_1.PNG" /></p>
+</li>
+<li>
+<p>Send the <strong>Get Production Data</strong> request to get the <em>deviceid</em> to get information on the battery, PV, and grid data.</p>
+<p><img alt="Postman HTTP Requests" src="../img/production_1.PNG" /></p>
+</li>
+<li>
+<p>The next HTTP request uses a ** PUT ** request, <strong>Put new PV Inverter in PV Plant</strong> to create a new resource in the server. When you open this request in Postman, you can see that you can specify two parameters in the request body of the PUT request, i.e., the PV id and the PV Plant id. Specify the <em>pv_id</em> as 3 and the <em>plant_id</em> as 25056 and send the PUT request. Since Plant 25056 belongs to the authorized user, the addition of the inverter is permitted.  Verify the result by issuing the <strong>Get PV Inverters from Plant</strong> request.  If you change the <em>plant_id</em> to 12345 if will fail. </p>
+<p><img alt="Postman HTTP Requests" src="../img/add_pv.PNG" /></p>
+</li>
+<li>
+<p>Now send the <strong>Deactivate a PV Inverter</strong> command with <em>pv_id</em> of 1.</p>
+<p><img alt="Postman HTTP Requests" src="../img/deactivate.PNG" /></p>
+</li>
+<li>
+<p>Verify the status of the PV inverter with the <strong>Get PV Active Status</strong> request with <em>pv_id</em> = 1.  Then try with <em>pv_id</em> = 2. </p>
+<p><img alt="Postman HTTP Requests" src="../img/get_status_1.PNG" /></p>
+<p><img alt="Postman HTTP Requests" src="../img/get_status_2.PNG" /></p>
+</li>
+</ol>
+<h3 id="lessons_learned">Lessons Learned<a class="headerlink" href="#lessons_learned" title="Permanent link">&para;</a></h3>
+<p>This lesson showed how to interact with an API through a Postman client. A wide variety of different HTTP requests were examined. Additionally, configuring HTTP Requests, headers, and authorization tokens such as JWT via Postman proved to be user-friendly and good for API testing purposes.</p>
+<h2 id="owasp_zap">OWASP Zap<a class="headerlink" href="#owasp_zap" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>To begin, if they are not already running, run the following in two PowerShell consoles on the DERMS (Windows) machine:</p>
+<p><code>node .\Documents\cyberstrike_api\pv_server.js</code></p>
+<p><code>python .\Documents\cyberstrike_api\pv_api.py</code></p>
+</li>
+<li>
+<p>On the Kali machine, if not already running, start <code>Postman</code>.  We will now route all the Postman data through the OWASP ZAP application using a local proxy. </p>
+<p>Click on <code>File</code> &gt; <code>settings</code>. Click <code>Proxy</code> tab and select <code>Use the system proxy</code>. Check <code>HTTP</code>.  Set <code>Proxy Server</code> to <code>127.0.0.1</code> and port to <code>8080</code>.</p>
+<p><img alt="Set Proxy Postman" src="../img/set_proxy_postman.png" /></p>
+</li>
+<li>
+<p>Close the settings window. </p>
+</li>
+<li>
+<p>Click the Kali symbol in the top left and search for <code>OWASP ZAP</code> and run it. Next click on <code>Tools</code>&gt; <code>Options</code>. Scroll down to <code>Network</code> &gt; <code>Local Servers/Proxies</code> and enter: </p>
+<ul>
+<li>Address: <code>localhost</code></li>
+<li>Port: <code>8080</code>. </li>
+</ul>
+<p>Click OK.</p>
+<p><img alt="Options OWASP Proxy" src="../img/options_owasp_proxy.png" /></p>
+</li>
+<li>
+<p>Open a terminal and enter the following: </p>
+<p><code>export http_proxy="127.0.0.1:8080"</code></p>
+</li>
+<li>
+<p>Switch back to Postman and select the first script <strong>Get JWT Token</strong> and click Send. You should see the JWT_token at the bottom along with Status: 200 OK.</p>
+</li>
+<li>
+<p>Click on the next script <strong>Get Customer Information</strong> and click send. You should once again be able to see 200 in Postman. </p>
+</li>
+<li>
+<p>Repeat for <strong>Put new PV Inverter in PV Plant</strong>; in this case you should see 201 CREATED.</p>
+</li>
+<li>
+<p>Once you have run these three scripts on Postman and observed the correct behavior, switch back to OWASP ZAP. Right click on the directory <code>http://10.10.0.50:5000</code> in the directory tree, scroll to <code>Attack</code> and click <code>Active Scan...</code>. Make sure that both <code>Recurse</code> and <code>Show Advanced Options</code> are selected, and then click <code>Start Scan</code>. The scan should take a minute or two to run and it will produce a list of all the attempted attacks at the bottom as it runs. </p>
+</li>
+<li>
+<p>Go to the <code>Alerts</code> tab to see the potential vulnerabilities that exist with this API implementation.  In our case, OWASP ZAP notes: </p>
+<ul>
+<li>Cross-Domain Misconfiguration</li>
+<li>Server Leaks Version Information</li>
+<li>X-Content-Type_Options Header Missing</li>
+</ul>
+<p>In a production API environment, these issues with the implementation would need to be addressed. </p>
+<p><img alt="OWASP Results" src="../img/owasp_results.PNG" /></p>
+</li>
+<li>
+<p>Reset the proxy by entering the following in the terminal: </p>
+<p><code>unset http_proxy</code></p>
+</li>
+</ol>
+<h3 id="lessons_learned_1">Lessons Learned<a class="headerlink" href="#lessons_learned_1" title="Permanent link">&para;</a></h3>
+<p>In this lesson we showed how OWASP Zap can be used to create a proxy in combination with a web browser and Postman in order to conduct attacks against a solar distributed energy resource management API whenever vulnerabilities exist. We looked at how to set up proxies in Firefox and in OWASP Zap, and how we can then observe all the traffic that passes through the proxy in OWASP, which can then be used to set up and run automatic attacks against a target machine.</p>
+<p>LAB COMPLETE!</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="over_lab6.html" class="btn btn-neutral float-left" title="Overview, Goals, Prerequisites"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="app_inspect.html" class="btn btn-neutral float-right" title="Smart Phone App Inspection">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>2022 National Technology and Engineering Solutions of Sandia, LLC</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="over_lab6.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="app_inspect.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

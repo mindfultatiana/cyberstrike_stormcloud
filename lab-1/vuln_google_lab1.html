@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Vuln google lab1 - CyberStrike Lab Workbook</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Vuln google lab1";
+        var mkdocs_page_input_path = "lab-1\\vuln_google_lab1.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../index.html" class="icon icon-home"> CyberStrike Lab Workbook
+        </a>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Overview</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../overview/labs_over.html">Laboratory Background Info</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 1 - Exploiting DER Interfaces</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-2/over_lab2.html">Overview, Goals, Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-2/recon_nmap2.html">Reconnaissance with Nmap</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-2/brute_force_ssh2.html">Brute Forcing SSH Passwords</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 2 - DOS Attacks</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-3/over_lab4.html">Overview, Goals, Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-3/dos.html">Denial of Service (DOS)</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 3 - Firmware Analysis</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-4/over_lab3b.html">Overview, Goals, and Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-4/der_firmware.html">Investigating DER Firmware</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 4 - Firmware Cryptography</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-4/over_lab3.html">Overview, Goals, and Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-4/malicious_update.html">Malicious Firmware</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-4/encrypt_decrypt_data3.html">Encrypting/Decrypting Data (optional)</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 5 - Web Exploitation</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-5/over_lab5.html">Overview, Goals, Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-5/web_exploit.html">Website Exploits</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-5/control_der_vnc5.html">Controlling the DER through VNC</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 6 - Vulnerable API and App Security</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-6/over_lab6.html">Overview, Goals, Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-6/interacting_api.html">Vulnerable API</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-6/app_inspect.html">Smart Phone App Inspection</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 7 - Replay and MITM Attacks</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-7/over_lab7.html">Overview, Goals, Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-7/replay-mitm.html">Replay and MITM</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 8 - Security Improvements</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../lab-8/over_lab8.html">Overview, Goals, Prerequisites</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Exercises</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../lab-8/20305firewalls.html">IEEE 2030.5 and FWs</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../about.html">About</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">CyberStrike Lab Workbook</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html" class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Vuln google lab1</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h2 id="exercises">Exercises<a class="headerlink" href="#exercises" title="Permanent link">&para;</a></h2>
+<p>You will use your host computer or laptop to perform the Google and Shodan elements of this lab.</p>
+<h2 id="searching_for_vulnerabilities_using_google">Searching for Vulnerabilities using Google<a class="headerlink" href="#searching_for_vulnerabilities_using_google" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Open the web browser on the desktop of your virtual machine (double click the icon).</li>
+<li>Navigate to <code>https://www.google.com</code></li>
+<li>
+<p>Perform searches for vulnerabilities in ICS equipment using the following search terms:</p>
+<ul>
+<li><code>SMA Solar Vulnerability</code></li>
+<li><code>ICSA-19-281-01</code></li>
+<li><code>CVE &lt;DER Manufacturer&gt;</code></li>
+<li><code>Huawei Solar Vulnerability</code></li>
+<li><code>Fronius Vulnerability</code></li>
+<li><code>Tesla Powerwall Vulnerability</code></li>
+</ul>
+</li>
+</ol>
+<p><strong>NOTE:</strong> Most of the vulnerabilities identified through Google Searches will likely lead to the us-cert.cisa
+advisory pages, which will provide additional details about the vulnerability and affected products.</p>
+<p>Using the example above you will now use Google to identify Internet-connected devices. Identifying information presented by web servers can be used to search for Internet-connected devices.</p>
+<ol>
+<li>
+<p>Open a web browser (e.g., Internet Explorer, Firefox Web Browser, Chrome)</p>
+</li>
+<li>
+<p>Navigate to <a href="https://google.com">google.com</a></p>
+<p>There are many other Google search options that can help narrow down the results to find an Internet-
+connected device. Below are a few additional search options:</p>
+<ul>
+<li>
+<p><code>“inurl:&lt;search string&gt;”</code> – Use this option to search the URL for a specific word</p>
+<ul>
+<li>This could be useful if the webpage is known to be located at a specific path on the web server</li>
+</ul>
+</li>
+<li>
+<p><code>“site:&lt;search string&gt;”</code> – Use this option to search for information on a specific domain</p>
+<ul>
+<li>To limit the search to a particular domain (e.g., www.rockwellautomation.com), include</li>
+</ul>
+</li>
+<li>
+<p><code>“site:rockwellautomation.com”</code> in the search query</p>
+<ul>
+<li>Add a minus sign (-) at the beginning (e.g., <code>–site:&lt;search string&gt;</code>) to exclude a domain from the search results</li>
+</ul>
+</li>
+<li>
+<p><code>“filetype:&lt;file type&gt;”</code> – Use this option to limit the search to a specific file type</p>
+<ul>
+<li>This could be used to search for PLC configuration files that are being inadvertently hosted on a public web server</li>
+</ul>
+</li>
+<li>
+<p><code>“cache:&lt;website&gt;"</code> – displays google cache of the page. Useful for content that has been removed</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Search Google for keywords by using the advanced search</p>
+<ul>
+<li><code>Huawei SUN2000 filetype:pdf</code>  </li>
+<li><code>intitle:fronius solar</code></li>
+<li><code>intitle:"MODBUS TCP RS485 Converter" intext:"Module Name: MMTCPBCONV" "powered by
+  Atmel ARM."</code>   </li>
+<li>Find software to interact with SunSpec-compliant devices: <code>site:github.com sunspec
+  modbus</code>    </li>
+<li>Look for SMA firmware (*.up2 files): <code>site:sma.de firmware up2</code>   </li>
+</ul>
+<p>Some additional search ideas are available from: <a href="https://www.exploit-db.com/google-hacking-database">Exploit DB</a>   </p>
+<p><strong>NOTE:</strong> Search results vary by time, so you may or may not find the same things.</p>
+<hr />
+<p><img alt="ifconfig" src="../img/image9.png" /></p>
+<hr />
+<p><strong>CAUTION</strong>: As with connecting to any unfamiliar sites on the Internet, be very careful
+connecting to any devices identified through Google. These could be live systems, they
+could be Honeypots used by researchers, or they could be a malicious attacker.</p>
+</li>
+<li>
+<p>The Cybersecurity &amp; Infrastructure Security Agency (CISA) has Industrial Control Systems Cyber Emergency Response Team (ICS-CERT) advisories located here: <a href="https://www.cisa.gov/uscert/ics/advisories">ICS-CERT</a></p>
+<p>There is also a vulnerability visualization dashboard here: <a href="https://datastudio.google.com/u/0/reporting/f0d99ae7-c75b-4fdd-9951-8ecada5aee5e/page/p_khybw5e6rc?mc_cid=2ba4cff293&amp;mc_eid=UNIQID">Vulnerability Visualization Dash</a></p>
+<p>Can you identify any Solar manufacturers in the list?</p>
+</li>
+<li>
+<p>Try using some of these techniques to search your company domain to identify any Internet-connected devices attached to your network, or to see if any private information is being leaked.</p>
+</li>
+</ol>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>2022 National Technology and Engineering Solutions of Sandia, LLC</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
