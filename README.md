@@ -5,11 +5,12 @@ This repository includes the MkDocs data used to build the CyberStrike STORMCLOU
 The U.S. Department of Energy (DOE) Office of Cybersecurity, Energy Security and Emergency Response (CESER), in collaboration Idaho National Laboratory (INL), developed the CyberStrike™ training program.  This program has been expanded in collaboration with the DOE Solar Energy Technologies Office (SETO) and DOE Vehicle Technologies Office (VTO), with INL and Sandia National Laboratories, to include cybersecurity training for distributed energy resources (DER) and electric vehicle chargers. 
 
 More information on the program is provided in the following links: 
-* [INL Website](https://inl.gov/cyberstrike/)
-* [CyberStrike Training Program](https://inl.gov/wp-content/uploads/2022/09/22-50524_CyberstrikeOVERVIEW_r3.pdf)
-* [CyberStrike LIGHTS OUT Training](https://inl.gov/wp-content/uploads/2023/01/22-50524_CyberstrikeLIGHTSOUT_r2.pdf)
+* [INL Website](https://inl.gov/national-security/cyberstrike/)
+* [CyberStrike Training Program](https://inl.gov/document/cyberstrike-training-fact-sheet/)
+* [CyberStrike LIGHTS OUT Training](https://inl.gov/content/uploads/2023/07/CyberStrike-Lights-Out_2024-01-18-16_50_22.pdf)
+* [CyberStrike STORMCLOUD Training (Renewables)](https://inl.gov/content/uploads/2026/07/CyberStrike-Stormcloud-Workshop-Flyer.pdf)
 * [Video](https://www.youtube.com/watch?v=ZvMf5eHg89s)
-* [Sandia Progress Update on the DOE SETO Securing Solar for the Grid (S2G) Project](https://www.researchgate.net/publication/368599978_Securing_Solar_for_the_Grid_S2G_-_Progress_Update)
+* [DOE Securing Solar for the Grid (S2G) Project](https://www.energy.gov/cmei/systems/securing-solar-grid-s2g)
 
 # Website Construction 
 
